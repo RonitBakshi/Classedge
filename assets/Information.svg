@@ -1,0 +1,15 @@
+<svg id="Information" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#00b1ff"/>
+      <stop offset="1" stop-color="#0377ff"/>
+    </linearGradient>
+  </defs>
+  <g id="info_outline_black_24dp">
+    <g id="Group_13778" data-name="Group 13778">
+      <path id="Path_4501" data-name="Path 4501" d="M0,0H24V24H0Z" fill="none"/>
+      <path id="Path_4502" data-name="Path 4502" d="M0,0H24V24H0Z" fill="none" opacity="0.87"/>
+    </g>
+    <path id="Path_4503" data-name="Path 4503" d="M11,7h2V9H11Zm1,10a1,1,0,0,0,1-1V12a1,1,0,0,0-2,0v4A1,1,0,0,0,12,17ZM12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8.011,8.011,0,0,1,12,20Z" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

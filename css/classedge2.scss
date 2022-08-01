@@ -8,6 +8,7 @@ $white: #FFFFFF;
 $background_white: #F7F8FA;
 $carbon: #7486A3;
 $blue: #6D5BCB;
+$btnblue: #0394FF;
 $smog: #E7EAEF;
 
 
@@ -180,7 +181,6 @@ body {
 }
 
 .titlebar {
-    background-image: linear-gradient(#BFE9B3,#FAFCE6);
     height: 104px;
     display: flex;
     align-items: center;
@@ -191,6 +191,9 @@ body {
     &__btn {
         min-width: 40px;
         background-color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         height: 40px;
         border: none;
         border-radius: 8px;
@@ -292,58 +295,7 @@ body {
     }
 
     &__searchbar {
-        background-color: $white;
-        width: 100%;
-        height: 48px;
-        border-style: solid;
-        border-radius: 8px;
-        border-width: 1px;
-        border-color: $Rhino;
         box-shadow: 0px 4px 16px #00000014;
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        padding-inline: 15px;
-
-        &__searchicon {
-            min-height: 17px;
-            min-width: 17px;
-
-            &--active {
-                display: none;
-            }
-        }
-
-        &__input {
-            flex: 1;
-            border-radius: 8px;
-            border: none;
-            height: 46px;
-            padding-top: 1px;
-            font-size: 16px;
-
-            &:focus {
-                outline: none;
-            }
-
-            &::placeholder {
-                color: $Rhino;
-                font-size: 16px;
-            }
-        }
-
-        &__btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: none;
-            border: none;
-
-            &--active {
-                display: none;
-            }
-        }
-        
     }
 
     &__tabbar {
@@ -408,73 +360,11 @@ body {
         margin: 0 3px;
     }
 
-    &__card {
-        background-color: $white;
-        flex: 1;
-        height: 128px;
+    &__bookinfo {
+        padding: 24px;
         box-shadow: 0px 4px 16px #00000014;
         border-radius: 16px;
-        padding: 24px;
-
-        &__tag {
-            gap: 16px;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            height: 24px;
-            min-width: max-content;
-
-            &__subject {
-                min-width: max-content;
-                background-color: #ffd500;
-                border-radius: 4px;
-                color: white;
-                font-size: 14px;
-                height: 24px;
-                padding:  3px 8px;
-            }
-
-            &__class {
-                font-size: 12px;
-                color: $carbon;
-                flex: 1;
-            }
-
-            &__btn {
-                background: none;
-                border: none;
-                cursor: pointer;
-            }
-        }
-
-        &__header {
-            font-size: 16px;
-            color: $cobalt;
-            font-weight: 400;
-            min-width: max-content;
-            margin-top: 16px;
-            margin-bottom: 8px;
-        }
-
-        &__info {
-            font-size: 12px;
-            display: flex;
-            gap: 8px;
-
-            &__resources {
-                color: $carbon;
-            }
-
-            &__devider {
-                color: $smog;
-            }
-
-            &__lastmodified {
-                color: $blue;
-                flex: 1;
-                min-width: max-content;
-            }
-        }
+        height: 128px;
     }
 
     &__right {
@@ -482,5 +372,236 @@ body {
         background-color: $white;
         border-radius: 16px;
         box-shadow: 0px 0px 12px #283A5E1F;
+    }
+}
+
+.bookdetails {
+    background-color: $background_white;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 54px 54px 57px;
+    gap: 24px;
+
+    &__left {
+        flex: 1;
+        background-color: $white;
+        box-shadow: 0px 0px 12px #283A5E1F;
+        border-radius: 16px;
+        padding: 76px 100px;
+    }
+
+    &__card {
+        display: flex;
+        align-items: center;
+        height: 72px;
+        gap: 27px;
+
+        &__btn {
+            font-size: 20px;
+            height: 24px;
+            width: 24px;
+            background: none;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 5px;
+            cursor: pointer;
+            color: $carbon;
+        }
+
+        &__content {
+            flex: 1;
+            height: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+
+            &__h {
+                font-size: 16px;
+                color: $cobalt;
+                font-weight: 400;
+                min-width: max-content;
+            }
+
+            &__p {
+                font-size: 12px;
+                color: $carbon;
+                min-width: max-content;
+            }
+        }
+
+        &__expandbtn {
+            height: 24px;
+            display: flex;
+            gap: 8px;
+            background: none;
+            border: none;
+            justify-content: space-between;
+            align-items: center;
+            min-width: max-content;
+            cursor: pointer;
+
+            &__text {
+                font-size: 16px;
+                color: $btnblue;
+            }
+        }
+
+        &__header {
+            font-size: 12px;
+            color: $Rhino;
+            flex: 1;
+            min-width: max-content;
+        }
+    }
+
+    &__checkbox {
+        height: 18px;
+        width: 18px;
+        border-radius: 2px;
+        margin: 0 3px;
+    }
+
+    &__searchbar {
+        margin-top: 32px;
+        margin-bottom: 16px;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        height: 40px;
+        gap: 27px;
+    }
+
+    &__right {
+        min-width: 376px;
+        background-color: $white;
+        border-radius: 16px;
+        box-shadow: 0px 0px 12px #283A5E1F;
+    }
+}
+
+.searchbar {
+    background-color: $white;
+    width: 100%;
+    height: 48px;
+    border-style: solid;
+    border-radius: 8px;
+    border-width: 1px;
+    border-color: $Rhino;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-inline: 15px;
+
+    &__searchicon {
+        min-height: 17px;
+        min-width: 17px;
+
+        &--active {
+            display: none;
+        }
+    }
+
+    &__input {
+        flex: 1;
+        border-radius: 8px;
+        border: none;
+        height: 46px;
+        padding-top: 1px;
+        font-size: 16px;
+
+        &:focus {
+            outline: none;
+        }
+
+        &::placeholder {
+            color: $Rhino;
+            font-size: 16px;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        border: none;
+
+        &--active {
+            display: none;
+        }
+    } 
+}
+
+.bookinfo {
+    background-color: $white;
+    flex: 1;
+
+    &__tag {
+        gap: 16px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: 24px;
+        min-width: max-content;
+
+        &__subject {
+            min-width: max-content;
+            background-color: #ffd500;
+            border-radius: 4px;
+            color: white;
+            font-size: 14px;
+            height: 24px;
+            padding:  3px 8px;
+        }
+
+        &__class {
+            font-size: 12px;
+            color: $carbon;
+            flex: 1;
+        }
+
+        &__btn {
+            min-width: 24px;
+            height: 24px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: $btnblue;
+            cursor: pointer;
+        }
+    }
+
+    &__header {
+        font-size: 16px;
+        color: $cobalt;
+        font-weight: 400;
+        min-width: max-content;
+        margin-top: 16px;
+        margin-bottom: 8px;
+    }
+
+    &__info {
+        font-size: 12px;
+        display: flex;
+        gap: 8px;
+
+        &__resources {
+            color: $carbon;
+        }
+
+        &__devider {
+            color: $smog;
+        }
+
+        &__lastmodified {
+            color: $blue;
+            flex: 1;
+            min-width: max-content;
+        }
     }
 }

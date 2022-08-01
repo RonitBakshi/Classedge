@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/classedge2.css">
+
     <title>Class edge</title>
 </head>
 <body>
@@ -134,70 +135,141 @@
 
     <div class="titlebar">
 
+        <button class="titlebar__btn">
+            <img src="assets/Back.svg" alt="">
+        </button>
+
         <div class="titlebar__title">
-            My Desk
+            Book Details
         </div>
 
         <button class="titlebar__btn">
-            <img src="assets/Notifications.svg" alt="">
+            <img src="assets/Information.svg" alt="">
+        </button>
+
+        <button class="titlebar__btn">
+            <img src="assets/Overflow.svg" alt="">
         </button>
 
         <button class="titlebar__primary">
             <img class="titlebar__primary__img" src="assets/Add.svg" alt="">
-            <p class="titlebar__primary__p">Create new</p>
+            <p class="titlebar__primary__p">Add Resources</p>
         </button>
 
     </div>
 
-    <div class="mydesk">
+    <div class="bookdetails">
 
-        <div class="mydesk__card">
-            <div class="mydesk__card__content">
-                <h1 class="mydesk__card__content__h1">
-                    Bookshelf
+        <div class="bookdetails__left">
+
+            <div class="bookinfo">
+                <div class="bookinfo__tag"> 
+    
+                    <div class="bookinfo__tag__subject">
+                        SCI
+                    </div>
+    
+                    <p class="bookinfo__tag__class">
+                        class 8
+                    </p>
+    
+                    <button class="bookinfo__tag__btn">
+                        &#8249
+                    </button>
+    
+                    <button class="bookinfo__tag__btn">
+                        &#8250
+                    </button>
+                </div>
+    
+                <h1 class="bookinfo__header">
+                    Guide (New Age) Guide of Science
                 </h1>
-                <p class="mydesk__card__content__p">
-                    your personal space to store your books and related resources
-                </p>
+    
+                <div class="bookinfo__info">
+                    <p class="bookinfo__info__resources">
+                        36 added resources
+                    </p>
+                    <p class="bookinfo__info__devider">
+                        |
+                    </p>
+                    <p class="bookinfo__info__lastmodified">
+                        Modified Yesterday
+                    </p>
+                </div>
             </div>
-            <img class="mydesk__card__img" src="" alt="">
+
+            <div class="bookdetails__searchbar searchbar">
+                <img class="searchbar__searchicon" src="assets/search.svg" alt="">
+                <input class="searchbar__input" type="text" placeholder="Search...">
+                <button class="searchbar__btn searchbar__btn--active">
+                    <img  src="assets/x-circle.svg" alt="">
+                </button>
+            </div>
+
+            <ul class="bookdetails__list">
+
+                <li class="bookdetails__header">
+                    <input class="bookdetails__checkbox" type="checkbox"> 
+                    <p class="bookdetails__card__header">Table of Content (18)</p>
+                    <button class="bookdetails__card__expandbtn">
+                        <img class="bookdetails__card__expandbtn__img" src="assets/Expand All.svg" alt="">
+                        <p class="bookdetails__card__expandbtn__text">Expand All</p>
+                    </button>
+                </li>
+
+                <li class="bookdetails__card">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <button class="bookdetails__card__btn">
+                        &#8250
+                    </button>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h">Ch 1:Crop Production</h1>
+                        <p class="bookdetails__card__content__p">13 Topics</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <button class="bookdetails__card__btn">
+                        &#8250
+                    </button>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h">Ch 2:Microorganisms: Friend or Foe</h1>
+                        <p class="bookdetails__card__content__p">12 Topics</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <button class="bookdetails__card__btn">
+                        &#8250
+                    </button>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h">Ch 3:Synthetic Fibres and Plastics</h1>
+                        <p class="bookdetails__card__content__p">17 Topics</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <button class="bookdetails__card__btn">
+                        &#8250
+                    </button>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h">Ch 4:Materials: Metals and Non-Metals</h1>
+                        <p class="bookdetails__card__content__p">17 Topics</p>
+                    </div>
+                </li>
+
+                
+            </ul>
+
         </div>
 
-        <div class="mydesk__card">
-            <div class="mydesk__card__content">
-                <h1 class="mydesk__card__content__h1">
-                    Repository
-                </h1>
-                <p class="mydesk__card__content__p">
-                    Find out what interesting things are waiting in there
-                </p>
-            </div>
-            <img class="mydesk__card__img" src="" alt="">
+        <div class="bookdetails__right">
         </div>
 
-        <div class="mydesk__card">
-            <div class="mydesk__card__content">
-                <h1 class="mydesk__card__content__h1">
-                    Incidents
-                </h1>
-                <p class="mydesk__card__content__p">
-                    You can log and update student incidents here
-                </p>
-            </div>
-            <img class="mydesk__card__img" src="" alt="">
-        </div>
-
-        <div class="mydesk__card">
-            <div class="mydesk__card__content">
-                <h1 class="mydesk__card__content__h1">
-                    Portions
-                </h1>
-                <p class="mydesk__card__content__p">
-                    Portion creation is easy and fun Dont hold back your creativity
-                </p>
-            </div>
-            <img class="mydesk__card__img" src="" alt="">
-        </div>
     </div>
 </body>
 </html>
