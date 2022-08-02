@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <link rel="stylesheet" href="css/classedge2.css">
     <title>Class edge</title>
@@ -17,10 +18,8 @@
 
         <div class="header__left">
 
-            <button class="header__btn">
-                <svg height="24" width="24">
-                    <polygon points="0 12, 6 22, 18 22, 24 12, 18 2, 6 2"/>
-                </svg>
+            <button class="header__btn material-icons">
+                hexagon
             </button>
 
             <div class="header__logo">
@@ -56,37 +55,29 @@
         <ul class="nav__ul">
             
             <li class="nav__li">
-                <button class="nav__btn">
-                    <svg height="24" width="24">
-                        <polygon class="nav__btn__polygon" points="0 12, 6 22, 18 22, 24 12, 18 2, 6 2"/>
-                    </svg>
+                <button class="nav__btn material-icons">
+                    hexagon
                 </button>
                 <p class="nav__p">Planner</p>
             </li>
 
             <li class="nav__li">
-                <button class="nav__btn">
-                    <svg height="24" width="24">
-                        <polygon class="nav__btn__polygon" points="0 12, 6 22, 18 22, 24 12, 18 2, 6 2"/>
-                    </svg>
+                <button class="nav__btn material-icons">
+                    hexagon
                 </button>
                 <p class="nav__p">Classes</p>
             </li>
 
             <li class="nav__li">
-                <button class="nav__btn nav__btn--active">
-                    <svg height="24" width="24">
-                        <polygon class="nav__btn__polygon nav__btn__polygon--active" points="0 12, 6 22, 18 22, 24 12, 18 2, 6 2"/>
-                    </svg>
+                <button class="nav__btn nav__btn--active material-icons">
+                    hexagon
                 </button>
                 <p class="nav__p nav__p--active">My Desk</p>
             </li>
 
             <li class="nav__li">
-                <button class="nav__btn">
-                    <svg height="24" width="24">
-                        <polygon class="nav__btn__polygon" points="0 12, 6 22, 18 22, 24 12, 18 2, 6 2"/>
-                    </svg>
+                <button class="nav__btn material-icons">
+                    hexagon
                 </button>
                 <p class="nav__p">Messages</p>
             </li>
@@ -102,28 +93,22 @@
         <ul class="nav__ul">
 
             <li class="nav__li">
-                <button class="nav__btn">
-                    <svg height="24" width="24">
-                        <polygon class="nav__btn__polygon" points="0 12, 6 22, 18 22, 24 12, 18 2, 6 2"/>
-                    </svg>
+                <button class="nav__btn material-icons">
+                    hexagon
                 </button>
                 <p class="nav__p">Contact us</p>
             </li>
 
             <li class="nav__li">
-                <button class="nav__btn">
-                    <svg height="24" width="24">
-                        <polygon class="nav__btn__polygon" points="0 12, 6 22, 18 22, 24 12, 18 2, 6 2"/>
-                    </svg>
+                <button class="nav__btn material-icons">
+                    hexagon
                 </button>
                 <p class="nav__p">Settings</p>
             </li>
 
             <li class="nav__li">
-                <button class="nav__btn">
-                    <svg height="24" width="24">
-                        <polygon class="nav__btn__polygon" points="0 12, 6 22, 18 22, 24 12, 18 2, 6 2"/>
-                    </svg>
+                <button class="nav__btn material-icons">
+                    hexagon
                 </button>
                 <p class="nav__p">Help</p>
             </li>
@@ -138,12 +123,12 @@
             My Desk
         </div>
 
-        <button class="titlebar__btn">
-            <img src="assets/Notifications.svg" alt="">
+        <button class="titlebar__btn material-icons">
+            notifications
         </button>
 
         <button class="titlebar__primary">
-            <img class="titlebar__primary__img" src="assets/Add.svg" alt="">
+            <span class="material-icons">add</span>
             <p class="titlebar__primary__p">Create new</p>
         </button>
 
@@ -151,7 +136,7 @@
 
     <div class="mydesk">
 
-        <div class="mydesk__card">
+        <a href="bookshelf.html" class="mydesk__card">
             <div class="mydesk__card__content">
                 <h1 class="mydesk__card__content__h1">
                     Bookshelf
@@ -160,8 +145,8 @@
                     your personal space to store your books and related resources
                 </p>
             </div>
-            <img class="mydesk__card__img" src="" alt="">
-        </div>
+            <img class="mydesk__card__img" src="assets/image002.png" alt="">
+        </a>
 
         <div class="mydesk__card">
             <div class="mydesk__card__content">
@@ -172,7 +157,7 @@
                     Find out what interesting things are waiting in there
                 </p>
             </div>
-            <img class="mydesk__card__img" src="" alt="">
+            <img class="mydesk__card__img" src="assets/image001.png" alt="">
         </div>
 
         <div class="mydesk__card">
@@ -184,7 +169,7 @@
                     You can log and update student incidents here
                 </p>
             </div>
-            <img class="mydesk__card__img" src="" alt="">
+            <img class="mydesk__card__img" src="assets/image005.png" alt="">
         </div>
 
         <div class="mydesk__card">
@@ -196,8 +181,13 @@
                     Portion creation is easy and fun Dont hold back your creativity
                 </p>
             </div>
-            <img class="mydesk__card__img" src="" alt="">
+            <img class="mydesk__card__img" src="assets/image003.png" alt="">
         </div>
+    </div>
+
+    <div class="background">
+        <div class="background__top background__top--mydesk"></div>
+        <div class="background__bottom background__bottom--mydesk"></div>
     </div>
 </body>
 </html>

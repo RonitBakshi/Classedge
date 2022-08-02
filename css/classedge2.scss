@@ -21,10 +21,7 @@ $smog: #E7EAEF;
 
 a {
     font-style: none;
-}
-
-body {
-    background-color: $lightyellow;
+    text-decoration: none;
 }
 
 .header {
@@ -49,10 +46,8 @@ body {
         min-width: 80px;
         background-color: #243A61;
         border: none;
-
-        polygon {
-            fill: $white;
-        }
+        color: $white;
+        cursor: pointer;
     }
 
     &__logo {
@@ -157,16 +152,9 @@ body {
         justify-content: center;
         color: $Rhino;
 
-        &__polygon {
-            fill: $Rhino;
-
-            &--active {
-                fill: $cobalt;
-            }
-        }
-
         &--active {
             background-color: $smog;
+            color: $cobalt;
         }
     }
 
@@ -194,6 +182,7 @@ body {
     &__btn {
         min-width: 40px;
         background-color: $white;
+        color: #0377FF;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -281,8 +270,8 @@ body {
 
         &__img {
             min-height: 180px;
-            height: 100%;
             width: 260px;
+            object-fit: contain;
         }
     }
 }
@@ -293,7 +282,6 @@ body {
     left: 80px;
     right: 0;
     bottom: 0px;
-    background-color: $background_white;
     display: flex;
     justify-content: space-between;
     padding: 0 54px 54px 57px;
@@ -322,12 +310,13 @@ body {
             display: flex;
             align-items: center;
             justify-content: center;
+            cursor: pointer;
 
             &--active {
                 border-top: 0;
                 border-left: 0;
                 border-right: 0;
-                border-bottom: 1px;
+                border-bottom: 2px;
                 border-style: solid;
                 border-color: $cobalt;
             }
@@ -337,7 +326,6 @@ body {
     &__list {
         display: flex;
         flex-direction: column;
-        overflow-y: hidden;
         overflow: auto;
         padding: 16px 0;
         gap: 16px;
@@ -347,21 +335,25 @@ body {
         &__item {
             min-height: 128px;
             list-style: none;
-            display: flex;
+            display: none;
             align-items: center;
             gap: 8px;
 
             &--active {
-                display: block;
+                display: flex;
             }
         }
 
         &__header{
             min-height: 40px;
-            display: flex;
+            display: none;
             align-items: center;
             justify-content: start;
             gap: 16px;
+
+            &--active{
+                display: flex;
+            }
         
             &__h1 {
                 
@@ -411,7 +403,6 @@ body {
     left: 80px;
     bottom: 0;
     right: 0;
-    background-color: $background_white;
     display: flex;
     justify-content: space-between;
     padding: 0 54px 54px 57px;
@@ -427,10 +418,9 @@ body {
     }
 
     &__card {
-        display: flex;
+        display: none;
         align-items: center;
         height: 72px;
-        gap: 27px;
 
         &__btn {
             font-size: 20px;
@@ -441,31 +431,46 @@ body {
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 5px;
+            margin-left: 24px;
+            margin-right: 32px;
             cursor: pointer;
             color: $carbon;
         }
 
         &__thumbnail {
+            color: $white;
             min-height: 40px;
             min-width: 40px;
-            background-color: #ffd500;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 8px;
+            margin-left: 24px;
+            margin-right: 16px;
+
+            &--yellow {
+                background-color: #ffd500;
+            }
         }
 
         &__content {
             flex: 1;
             height: 40px;
             display: flex;
+            justify-content: center;
             flex-direction: column;
             gap: 7px;
 
-            &__h {
+            &__h1 {
                 font-size: 16px;
                 color: $cobalt;
+                font-weight: 400;
+                min-width: max-content;
+            }
+
+            &__h2 {
+                font-size: 16px;
+                color: $carbon;
                 font-weight: 400;
                 min-width: max-content;
             }
@@ -481,17 +486,14 @@ body {
             height: 24px;
             display: flex;
             gap: 8px;
+            font-size: 16px;
+            color: $btnblue;
             background: none;
             border: none;
             justify-content: space-between;
             align-items: center;
             min-width: max-content;
             cursor: pointer;
-
-            &__text {
-                font-size: 16px;
-                color: $btnblue;
-            }
         }
 
         &__header {
@@ -499,6 +501,10 @@ body {
             color: $Rhino;
             flex: 1;
             min-width: max-content;
+        }
+
+        &--active {
+            display: flex;
         }
     }
 
@@ -546,6 +552,7 @@ body {
     &__searchicon {
         min-height: 17px;
         min-width: 17px;
+        color: $carbon;
 
         &--active {
             display: none;
@@ -571,6 +578,7 @@ body {
     }
 
     &__btn {
+        color: $carbon;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -581,6 +589,12 @@ body {
             display: none;
         }
     } 
+
+    &--active {
+        border-color: $btnblue;
+        backdrop-filter: blur(32px);
+        -webkit-backdrop-filter: blur(32px);
+    }
 }
 
 .bookinfo {
@@ -675,4 +689,51 @@ body {
 
 .material-icons.white {
     color: white;
+}
+
+.background {
+
+    &__top {
+        position: fixed;
+        height: 104px;
+        top: 72px;
+        left: 80px;
+        right: 0;
+        z-index: -10;
+
+        &--mydesk {
+            background-image: linear-gradient($green,$lightyellow);
+        }
+
+        &--bookshelf {
+            background-image: linear-gradient($green,$background_white);
+            height: 160px;
+        }
+
+        &--bookdetails {
+            background-color: $background_white;
+        }
+    }
+
+    &__bottom {
+        position: fixed;
+        top: 176px;
+        left: 80px;
+        bottom: 0;
+        right: 0;
+        z-index: -10;
+
+        &--mydesk {
+            background-color: $lightyellow;
+        }
+
+        &--bookshelf {
+            top: 232px;
+            background-color: $background_white;
+        }
+
+        &--bookdetails {
+            background-color: $background_white;
+        }
+    }
 }

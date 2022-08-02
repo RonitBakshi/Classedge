@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/classedge2.css">
+
+    <title>Book Details</title>
+</head>
+<body>
+    <header class="header">
+
+        <div class="header__left">
+
+            <button class="header__btn material-icons">
+                hexagon
+            </button>
+
+            <div class="header__logo">
+                <h1 class="header__logo__h1">class<span>edge</span></h1>
+                <p class="header__logo__p">app name here</p>
+            </div>
+
+            <p class="header__line">
+                |
+            </p>
+
+            <div class="header__profile">
+                <img class="header__profile__img" src="assets/babydriver1.png" alt="school logo">
+                <div class="header__profile__content">
+                    <h1 class="header__profile__content__h1">MES High School</h1>
+                    <p class="header__profile__content__p">Baramati</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="header__right">
+            <div class="header__profile__content"> 
+                <h1 class="header__profile__content__h1">Name Surname</h1>
+                <p class="header__profile__content__p">User Role</p>
+            </div>
+            <img class="header__profile__img" src="assets/babydriver1.png" alt="school logo">
+        </div>
+
+    </header>
+
+    <nav class="nav">
+
+        <ul class="nav__ul">
+            
+            <li class="nav__li">
+                <button class="nav__btn material-icons">
+                    hexagon
+                </button>
+                <p class="nav__p">Planner</p>
+            </li>
+
+            <li class="nav__li">
+                <button class="nav__btn material-icons">
+                    hexagon
+                </button>
+                <p class="nav__p">Classes</p>
+            </li>
+
+            <li class="nav__li">
+                <button class="nav__btn nav__btn--active material-icons">
+                    hexagon
+                </button>
+                <p class="nav__p nav__p--active">My Desk</p>
+            </li>
+
+            <li class="nav__li">
+                <button class="nav__btn material-icons">
+                    hexagon
+                </button>
+                <p class="nav__p">Messages</p>
+            </li>
+
+            <li class="nav__li">
+                <button class="nav__btn">
+                    ...
+                </button>
+                <p class="nav__p">Notices</p>
+            </li>
+        </ul>
+
+        <ul class="nav__ul">
+
+            <li class="nav__li">
+                <button class="nav__btn material-icons">
+                    hexagon
+                </button>
+                <p class="nav__p">Contact us</p>
+            </li>
+
+            <li class="nav__li">
+                <button class="nav__btn material-icons">
+                    hexagon
+                </button>
+                <p class="nav__p">Settings</p>
+            </li>
+
+            <li class="nav__li">
+                <button class="nav__btn material-icons">
+                    hexagon
+                </button>
+                <p class="nav__p">Help</p>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <div class="titlebar">
+
+        <a href="bookshelf.html">
+            <button class="titlebar__btn material-icons">
+                arrow_back
+            </button>
+        </a>
+
+        <div class="titlebar__title">
+            Book Details
+        </div>
+
+        <button class="titlebar__btn">
+            <span class="material-icons outlined">
+                info
+            </span>
+        </button>
+
+        <button class="titlebar__btn material-icons">
+            more_vert
+        </button>
+
+        <button class="titlebar__primary">
+            <span class="material-icons">add</span>
+            <p class="titlebar__primary__p">Add Resources</p>
+        </button>
+
+    </div>
+
+    <div class="bookdetails">
+
+        <div class="bookdetails__left">
+
+            <div class="bookinfo">
+                <div class="bookinfo__tag"> 
+    
+                    <div class="bookinfo__tag__left">
+                        <div class="bookinfo__tag__subject bookinfo__tag__subject--science">
+                            SCI
+                        </div>
+
+                        <p class="bookinfo__tag__class">
+                            class 8
+                        </p>
+                    </div>
+    
+                    <div class="bookinfo__tag__right">
+                        <button class="bookinfo__tag__btn material-icons">
+                                chevron_left
+                        </button>
+        
+                        <button class="bookinfo__tag__btn material-icons">
+                                chevron_right
+                        </button>
+                    </div>
+                </div>
+    
+                <h1 class="bookinfo__header">
+                    Guide (New Age) Guide of Science
+                </h1>
+    
+                <div class="bookinfo__info">
+                    <p class="bookinfo__info__resources">
+                        36 added resources
+                    </p>
+                    <p class="bookinfo__info__devider">
+                        |
+                    </p>
+                    <p class="bookinfo__info__lastmodified">
+                        Modified Yesterday
+                    </p>
+                </div>
+            </div>
+
+            <div class="bookdetails__searchbar searchbar">
+                <span class="searchbar__searchicon material-icons">
+                    search
+                </span>
+                <input class="searchbar__input" type="text" placeholder="Search...">
+                <button class="searchbar__btn searchbar__btn--active material-icons">
+                    highlight_off
+                </button>
+            </div>
+
+            <ul class="bookdetails__list">
+
+                <li class="bookdetails__header">
+                    <input class="bookdetails__checkbox" type="checkbox"> 
+                    <p class="bookdetails__card__header">Table of Content (18)</p>
+                    <button class="bookdetails__card__expandbtn">
+                            <span class="material-icons">keyboard_double_arrow_down</span>Expand All
+                    </button>
+                </li>
+
+                <li class="bookdetails__card bookdetails__card--active">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <button class="bookdetails__card__btn material-icons" id="chapter1-btn">
+                        chevron_right
+                    </button>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h1">Ch 1:Crop Production</h1>
+                        <p class="bookdetails__card__content__p">13 Topics</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card bookdetails__card--active">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <button class="bookdetails__card__btn material-icons" id="chapter2-btn">
+                        chevron_right
+                    </button>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h1">Ch 2:Microorganisms: Friend or Foe</h1>
+                        <p class="bookdetails__card__content__p">12 Topics</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card" id="chapter2">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <div class="bookdetails__card__thumbnail"></div>
+                    <div class="bookdetails__card__content">
+                        <h2 class="bookdetails__card__content__h2">2.1 Microorganisms</h2>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card" id="chapter2">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <div class="bookdetails__card__thumbnail"></div>
+                    <div class="bookdetails__card__content">
+                        <h2 class="bookdetails__card__content__h2">2.2 Where do Microorganisms live?</h2>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card" id="chapter2">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <div class="bookdetails__card__thumbnail bookdetails__card__thumbnail--yellow material-icons">
+                        link
+                    </div>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h1">What are Microbes?</h1>
+                        <p class="bookdetails__card__content__p">Wikipedia</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card" id="chapter2">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <div class="bookdetails__card__thumbnail"></div>
+                    <div class="bookdetails__card__content">
+                        <h2 class="bookdetails__card__content__h2">2.3 Microorganisms and Us</h2>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card" id="chapter2">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <div class="bookdetails__card__thumbnail"></div>
+                    <div class="bookdetails__card__content">
+                        <h2 class="bookdetails__card__content__h2">2.4 Harmful Microorganisms</h2>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card" id="chapter2">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <div class="bookdetails__card__thumbnail"></div>
+                    <div class="bookdetails__card__content">
+                        <h2 class="bookdetails__card__content__h2">2.5 Food Preservation</h2>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card" id="chapter2">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <div class="bookdetails__card__thumbnail bookdetails__card__thumbnail--yellow material-icons">
+                        description
+                    </div>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h1">What are 5 types of food preservation?</h1>
+                        <p class="bookdetails__card__content__p">Document</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card" id="chapter2">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <div class="bookdetails__card__thumbnail bookdetails__card__thumbnail--yellow material-icons">
+                        link
+                    </div>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h1">Definition and food preservation methods</h1>
+                        <p class="bookdetails__card__content__p">Wikipedia</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card" id="chapter2">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <div class="bookdetails__card__thumbnail"></div>
+                    <div class="bookdetails__card__content">
+                        <h2 class="bookdetails__card__content__h2">2.6 Nitrogen Fixsation</h2>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card" id="chapter2">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <div class="bookdetails__card__thumbnail"></div>
+                    <div class="bookdetails__card__content">
+                        <h2 class="bookdetails__card__content__h2">2.7 Nitrogen cycle</h2>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card" id="chapter2">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <div class="bookdetails__card__thumbnail bookdetails__card__thumbnail--yellow material-icons">
+                        link
+                    </div>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h1">Biochemical cycle</h1>
+                        <p class="bookdetails__card__content__p">Wikipedia</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card" id="chapter2">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <div class="bookdetails__card__thumbnail bookdetails__card__thumbnail--yellow material-icons">
+                        description
+                    </div>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h1">6 Steps of nitrogen cycle</h1>
+                        <p class="bookdetails__card__content__p">Document</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card bookdetails__card--active">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <button class="bookdetails__card__btn material-icons" id="chapter3-btn">
+                        chevron_right
+                    </button>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h1">Ch 3:Synthetic Fibres and Plastics</h1>
+                        <p class="bookdetails__card__content__p">17 Topics</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card bookdetails__card--active">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <button class="bookdetails__card__btn material-icons" id="chapter4-btn">
+                        chevron_right
+                    </button>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h1">Ch 4:Materials: Metals and Non-Metals</h1>
+                        <p class="bookdetails__card__content__p">13 Topics</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card bookdetails__card--active">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <button class="bookdetails__card__btn material-icons" id="chapter5-btn">
+                        chevron_right
+                    </button>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h1">Ch 5:Coal and Petroleum</h1>
+                        <p class="bookdetails__card__content__p">08 Topics</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card bookdetails__card--active">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <button class="bookdetails__card__btn material-icons" id="chapter6-btn">
+                        chevron_right
+                    </button>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h1">Ch 6:Combustion and Flame</h1>
+                        <p class="bookdetails__card__content__p">06 Topics</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card bookdetails__card--active">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <button class="bookdetails__card__btn material-icons" id="chapter7-btn">
+                        chevron_right
+                    </button>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h1">Ch 7:Conservation of Plants and Animals</h1>
+                        <p class="bookdetails__card__content__p">12 Topics</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card bookdetails__card--active">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <button class="bookdetails__card__btn material-icons" id="chapter8-btn">
+                        chevron_right
+                    </button>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h1">Ch 8:Cell Structure and Function</h1>
+                        <p class="bookdetails__card__content__p">20 Topics</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card bookdetails__card--active">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <button class="bookdetails__card__btn material-icons" id="chapter9-btn">
+                        chevron_right
+                    </button>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h1">Ch 9:Reproduction in Animals</h1>
+                        <p class="bookdetails__card__content__p">17 Topics</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card bookdetails__card--active">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <button class="bookdetails__card__btn material-icons" id="chapter10-btn">
+                        chevron_right
+                    </button>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h1">Ch 10:Reaching the Age of Adolescence</h1>
+                        <p class="bookdetails__card__content__p">12 Topics</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card bookdetails__card--active">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <button class="bookdetails__card__btn material-icons" id="chapter11-btn">
+                        chevron_right
+                    </button>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h1">Ch 11:Force and Pressure</h1>
+                        <p class="bookdetails__card__content__p">20 Topics</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card bookdetails__card--active">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <button class="bookdetails__card__btn material-icons" id="chapter12-btn">
+                        chevron_right
+                    </button>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h1">Ch 12:Friction</h1>
+                        <p class="bookdetails__card__content__p">17 Topics</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card bookdetails__card--active">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <button class="bookdetails__card__btn material-icons" id="chapter13-btn">
+                        chevron_right
+                    </button>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h1">Ch 13:Sound</h1>
+                        <p class="bookdetails__card__content__p">20 Topics</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card bookdetails__card--active">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <button class="bookdetails__card__btn material-icons" id="chapter14-btn">
+                        chevron_right
+                    </button>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h1">Ch 14:Chemical Effects of Electric Current</h1>
+                        <p class="bookdetails__card__content__p">13 Topics</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card bookdetails__card--active">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <button class="bookdetails__card__btn material-icons" id="chapter15-btn">
+                        chevron_right
+                    </button>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h1">Ch 15:Some Natural Phenomenon</h1>
+                        <p class="bookdetails__card__content__p">08 Topics</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card bookdetails__card--active">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <button class="bookdetails__card__btn material-icons" id="chapter16-btn">
+                        chevron_right
+                    </button>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h1">Ch 16:Light</h1>
+                        <p class="bookdetails__card__content__p">12 Topics</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card bookdetails__card--active">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <button class="bookdetails__card__btn material-icons" id="chapter17-btn">
+                        chevron_right
+                    </button>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h1">Ch 17:Stars and the Solar System</h1>
+                        <p class="bookdetails__card__content__p">20 Topics</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card bookdetails__card--active">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <button class="bookdetails__card__btn material-icons" id="chapter18-btn">
+                        chevron_right
+                    </button>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h1">Ch 18:Pollution of Air and Water</h1>
+                        <p class="bookdetails__card__content__p">17 Topics</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__header">
+                    <input class="bookdetails__checkbox" type="checkbox"> 
+                    <p class="bookdetails__card__header">Book Resources (6)</p>
+                    <button class="bookdetails__card__btn">
+                        <span class="material-icons">
+                            expand_more
+                        </span>
+                    </button>
+                </li>
+
+                <li class="bookdetails__card bookdetails__card--active">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <div class="bookdetails__card__thumbnail bookdetails__card__thumbnail--yellow material-icons">
+                        description
+                    </div>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h1">Practice Test 1</h1>
+                        <p class="bookdetails__card__content__p">Document</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card bookdetails__card--active">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <div class="bookdetails__card__thumbnail bookdetails__card__thumbnail--yellow material-icons">
+                        description
+                    </div>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h1">Practice Test 2</h1>
+                        <p class="bookdetails__card__content__p">Document</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card bookdetails__card--active">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <div class="bookdetails__card__thumbnail bookdetails__card__thumbnail--yellow material-icons">
+                        description
+                    </div>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h1">Practice Test 3</h1>
+                        <p class="bookdetails__card__content__p">Document</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card bookdetails__card--active">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <div class="bookdetails__card__thumbnail bookdetails__card__thumbnail--yellow material-icons">
+                        description
+                    </div>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h1">Practice Test 4</h1>
+                        <p class="bookdetails__card__content__p">Document</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card bookdetails__card--active">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <div class="bookdetails__card__thumbnail bookdetails__card__thumbnail--yellow material-icons">
+                        description
+                    </div>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h1">Practice Test 5</h1>
+                        <p class="bookdetails__card__content__p">Document</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card bookdetails__card--active">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <div class="bookdetails__card__thumbnail bookdetails__card__thumbnail--yellow material-icons">
+                        description
+                    </div>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h1">Practice Test 6</h1>
+                        <p class="bookdetails__card__content__p">Document</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="bookdetails__right">
+        </div>
+
+    </div>
+
+    <div class="background">
+        <div class="background__top background__top--bookdetails"></div>
+        <div class="background__bottom background__bottom--bookdetails"></div>
+    </div>
+
+    <script src="javascript/bookshelf.js"></script>
+</body>
+</html>

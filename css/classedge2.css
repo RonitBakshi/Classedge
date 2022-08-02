@@ -7,10 +7,7 @@
 
 a {
   font-style: none;
-}
-
-body {
-  background-color: #FAFCE6;
+  text-decoration: none;
 }
 
 .header {
@@ -34,9 +31,8 @@ body {
   min-width: 80px;
   background-color: #243A61;
   border: none;
-}
-.header__btn polygon {
-  fill: #FFFFFF;
+  color: #FFFFFF;
+  cursor: pointer;
 }
 .header__logo__h1 {
   font-size: 24px;
@@ -127,14 +123,9 @@ body {
   justify-content: center;
   color: #C1CAD8;
 }
-.nav__btn__polygon {
-  fill: #C1CAD8;
-}
-.nav__btn__polygon--active {
-  fill: #243A61;
-}
 .nav__btn--active {
   background-color: #E7EAEF;
+  color: #243A61;
 }
 .nav__p {
   font-size: 12px;
@@ -158,6 +149,7 @@ body {
 .titlebar__btn {
   min-width: 40px;
   background-color: #FFFFFF;
+  color: #0377FF;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -246,8 +238,9 @@ body {
 }
 .mydesk__card__img {
   min-height: 180px;
-  height: 100%;
   width: 260px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .bookshelf {
@@ -256,7 +249,6 @@ body {
   left: 80px;
   right: 0;
   bottom: 0px;
-  background-color: #F7F8FA;
   display: flex;
   justify-content: space-between;
   padding: 0 54px 54px 57px;
@@ -283,19 +275,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 .bookshelf__tabbar__tab--active {
   border-top: 0;
   border-left: 0;
   border-right: 0;
-  border-bottom: 1px;
+  border-bottom: 2px;
   border-style: solid;
   border-color: #243A61;
 }
 .bookshelf__list {
   display: flex;
   flex-direction: column;
-  overflow-y: hidden;
   overflow: auto;
   padding: 16px 0;
   gap: 16px;
@@ -305,19 +297,22 @@ body {
 .bookshelf__list__item {
   min-height: 128px;
   list-style: none;
-  display: flex;
+  display: none;
   align-items: center;
   gap: 8px;
 }
 .bookshelf__list__item--active {
-  display: block;
+  display: flex;
 }
 .bookshelf__list__header {
   min-height: 40px;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: start;
   gap: 16px;
+}
+.bookshelf__list__header--active {
+  display: flex;
 }
 .bookshelf__list__header__h1 {
   font-size: 12px;
@@ -359,7 +354,6 @@ body {
   left: 80px;
   bottom: 0;
   right: 0;
-  background-color: #F7F8FA;
   display: flex;
   justify-content: space-between;
   padding: 0 54px 54px 57px;
@@ -374,10 +368,9 @@ body {
   overflow: auto;
 }
 .bookdetails__card {
-  display: flex;
+  display: none;
   align-items: center;
   height: 72px;
-  gap: 27px;
 }
 .bookdetails__card__btn {
   font-size: 20px;
@@ -388,29 +381,44 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 5px;
+  margin-left: 24px;
+  margin-right: 32px;
   cursor: pointer;
   color: #7486A3;
 }
 .bookdetails__card__thumbnail {
+  color: #FFFFFF;
   min-height: 40px;
   min-width: 40px;
-  background-color: #ffd500;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 8px;
+  margin-left: 24px;
+  margin-right: 16px;
+}
+.bookdetails__card__thumbnail--yellow {
+  background-color: #ffd500;
 }
 .bookdetails__card__content {
   flex: 1;
   height: 40px;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   gap: 7px;
 }
-.bookdetails__card__content__h {
+.bookdetails__card__content__h1 {
   font-size: 16px;
   color: #243A61;
+  font-weight: 400;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+.bookdetails__card__content__h2 {
+  font-size: 16px;
+  color: #7486A3;
   font-weight: 400;
   min-width: -webkit-max-content;
   min-width: -moz-max-content;
@@ -427,6 +435,8 @@ body {
   height: 24px;
   display: flex;
   gap: 8px;
+  font-size: 16px;
+  color: #0394FF;
   background: none;
   border: none;
   justify-content: space-between;
@@ -436,10 +446,6 @@ body {
   min-width: max-content;
   cursor: pointer;
 }
-.bookdetails__card__expandbtn__text {
-  font-size: 16px;
-  color: #0394FF;
-}
 .bookdetails__card__header {
   font-size: 12px;
   color: #C1CAD8;
@@ -447,6 +453,9 @@ body {
   min-width: -webkit-max-content;
   min-width: -moz-max-content;
   min-width: max-content;
+}
+.bookdetails__card--active {
+  display: flex;
 }
 .bookdetails__checkbox {
   min-height: 18px;
@@ -490,6 +499,7 @@ body {
 .searchbar__searchicon {
   min-height: 17px;
   min-width: 17px;
+  color: #7486A3;
 }
 .searchbar__searchicon--active {
   display: none;
@@ -518,6 +528,7 @@ body {
   font-size: 16px;
 }
 .searchbar__btn {
+  color: #7486A3;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -526,6 +537,11 @@ body {
 }
 .searchbar__btn--active {
   display: none;
+}
+.searchbar--active {
+  border-color: #0394FF;
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
 }
 
 .bookinfo {
@@ -617,4 +633,41 @@ body {
 
 .material-icons.white {
   color: white;
+}
+
+.background__top {
+  position: fixed;
+  height: 104px;
+  top: 72px;
+  left: 80px;
+  right: 0;
+  z-index: -10;
+}
+.background__top--mydesk {
+  background-image: linear-gradient(#BFE9B3, #FAFCE6);
+}
+.background__top--bookshelf {
+  background-image: linear-gradient(#BFE9B3, #F7F8FA);
+  height: 160px;
+}
+.background__top--bookdetails {
+  background-color: #F7F8FA;
+}
+.background__bottom {
+  position: fixed;
+  top: 176px;
+  left: 80px;
+  bottom: 0;
+  right: 0;
+  z-index: -10;
+}
+.background__bottom--mydesk {
+  background-color: #FAFCE6;
+}
+.background__bottom--bookshelf {
+  top: 232px;
+  background-color: #F7F8FA;
+}
+.background__bottom--bookdetails {
+  background-color: #F7F8FA;
 }/*# sourceMappingURL=classedge2.css.map */

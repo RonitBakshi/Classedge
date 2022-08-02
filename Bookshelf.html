@@ -18,10 +18,8 @@
 
         <div class="header__left">
 
-            <button class="header__btn">
-                <svg height="24" width="24">
-                    <polygon points="0 12, 6 22, 18 22, 24 12, 18 2, 6 2"/>
-                </svg>
+            <button class="header__btn material-icons">
+                hexagon
             </button>
 
             <div class="header__logo">
@@ -57,37 +55,29 @@
         <ul class="nav__ul">
             
             <li class="nav__li">
-                <button class="nav__btn">
-                    <svg height="24" width="24">
-                        <polygon class="nav__btn__polygon" points="0 12, 6 22, 18 22, 24 12, 18 2, 6 2"/>
-                    </svg>
+                <button class="nav__btn material-icons">
+                    hexagon
                 </button>
                 <p class="nav__p">Planner</p>
             </li>
 
             <li class="nav__li">
-                <button class="nav__btn">
-                    <svg height="24" width="24">
-                        <polygon class="nav__btn__polygon" points="0 12, 6 22, 18 22, 24 12, 18 2, 6 2"/>
-                    </svg>
+                <button class="nav__btn material-icons">
+                    hexagon
                 </button>
                 <p class="nav__p">Classes</p>
             </li>
 
             <li class="nav__li">
-                <button class="nav__btn nav__btn--active">
-                    <svg height="24" width="24">
-                        <polygon class="nav__btn__polygon nav__btn__polygon--active" points="0 12, 6 22, 18 22, 24 12, 18 2, 6 2"/>
-                    </svg>
+                <button class="nav__btn nav__btn--active material-icons">
+                    hexagon
                 </button>
                 <p class="nav__p nav__p--active">My Desk</p>
             </li>
 
             <li class="nav__li">
-                <button class="nav__btn">
-                    <svg height="24" width="24">
-                        <polygon class="nav__btn__polygon" points="0 12, 6 22, 18 22, 24 12, 18 2, 6 2"/>
-                    </svg>
+                <button class="nav__btn material-icons">
+                    hexagon
                 </button>
                 <p class="nav__p">Messages</p>
             </li>
@@ -103,28 +93,22 @@
         <ul class="nav__ul">
 
             <li class="nav__li">
-                <button class="nav__btn">
-                    <svg height="24" width="24">
-                        <polygon class="nav__btn__polygon" points="0 12, 6 22, 18 22, 24 12, 18 2, 6 2"/>
-                    </svg>
+                <button class="nav__btn material-icons">
+                    hexagon
                 </button>
                 <p class="nav__p">Contact us</p>
             </li>
 
             <li class="nav__li">
-                <button class="nav__btn">
-                    <svg height="24" width="24">
-                        <polygon class="nav__btn__polygon" points="0 12, 6 22, 18 22, 24 12, 18 2, 6 2"/>
-                    </svg>
+                <button class="nav__btn material-icons">
+                    hexagon
                 </button>
                 <p class="nav__p">Settings</p>
             </li>
 
             <li class="nav__li">
-                <button class="nav__btn">
-                    <svg height="24" width="24">
-                        <polygon class="nav__btn__polygon" points="0 12, 6 22, 18 22, 24 12, 18 2, 6 2"/>
-                    </svg>
+                <button class="nav__btn material-icons">
+                    hexagon
                 </button>
                 <p class="nav__p">Help</p>
             </li>
@@ -134,26 +118,29 @@
     </nav>
 
     <div class="titlebar">
-
-        <button class="titlebar__btn">
-            <img src="assets/Back.svg" alt="">
-        </button>
+        <a href="my-desk.html">
+            <button class="titlebar__btn material-icons">
+                arrow_back
+            </button>
+        </a>
 
         <div class="titlebar__title">
             Bookshelf
         </div>
 
-        <button class="titlebar__btn">
-            <img src="assets/Notifications.svg" alt="">
+        <button class="titlebar__btn material-icons">
+            notifications
         </button>
 
-        <button class="titlebar__btn">
-            <img src="assets/Overflow.svg" alt="">
+        <button class="titlebar__btn material-icons">
+            more_vert
         </button>
 
         <button class="titlebar__primary">
-            <img class="titlebar__primary__img" src="assets/Books.svg" alt="">
-            <p class="titlebar__primary__p">Create Book</p>
+            <span class="material-icons">collections_bookmark</span>
+            <p class="titlebar__primary__p">
+                Create Book
+            </p>
         </button>
 
     </div>
@@ -163,10 +150,12 @@
         <div class="bookshelf__left">
 
             <div class="bookshelf__searchbar searchbar">
-                <img class="searchbar__searchicon" src="assets/search.svg" alt="">
+                <span class="searchbar__searchicon material-icons">
+                    search
+                </span>
                 <input class="searchbar__input" type="text" placeholder="Search...">
-                <button class="searchbar__btn searchbar__btn--active">
-                    <img  src="assets/x-circle.svg" alt="">
+                <button class="searchbar__btn searchbar__btn--active material-icons">
+                    highlight_off
                 </button>
             </div>
 
@@ -177,7 +166,7 @@
 
             <ul class="bookshelf__list">
 
-                <li class="bookshelf__list__header">
+                <li class="bookshelf__list__header bookshelf__list__header--active" id="Existing">
                     <input class="bookshelf__checkbox" type="checkbox">
                     <h1 class="bookshelf__list__header__h1">
                         Existing Books (10)
@@ -189,9 +178,21 @@
                     </button>
                 </li>
 
-                <li class="bookshelf__list__item" id="Existing">
+                <li class="bookshelf__list__header" id="Created">
                     <input class="bookshelf__checkbox" type="checkbox">
-                    <div class=" bookshelf__bookinfo bookinfo">
+                    <h1 class="bookshelf__list__header__h1">
+                        My Books (4)
+                    </h1>
+                    <button class="bookshelf__list__header__btn">
+                        <span class="material-icons">
+                            expand_more
+                        </span>
+                    </button>
+                </li>
+
+                <li class="bookshelf__list__item bookshelf__list__item--active" id="Existing">
+                    <input class="bookshelf__checkbox" type="checkbox">
+                    <a href="book-details.html" class=" bookshelf__bookinfo bookinfo">
 
                         <div class="bookinfo__tag"> 
 
@@ -229,10 +230,10 @@
                             </p>
                         </div>
 
-                    </div>
+                    </a>
                 </li>
 
-                <li class="bookshelf__list__item" id="Existing">
+                <li class="bookshelf__list__item bookshelf__list__item--active" id="Existing">
                     <input class="bookshelf__checkbox" type="checkbox">
                     <div class=" bookshelf__bookinfo bookinfo">
 
@@ -275,7 +276,7 @@
                     </div>
                 </li>
 
-                <li class="bookshelf__list__item" id="Existing">
+                <li class="bookshelf__list__item bookshelf__list__item--active" id="Existing">
                     <input class="bookshelf__checkbox" type="checkbox">
                     <div class=" bookshelf__bookinfo bookinfo">
 
@@ -318,7 +319,7 @@
                     </div>
                 </li>
 
-                <li class="bookshelf__list__item" id="Existing">
+                <li class="bookshelf__list__item bookshelf__list__item--active" id="Existing">
                     <input class="bookshelf__checkbox" type="checkbox">
                     <div class=" bookshelf__bookinfo bookinfo">
 
@@ -357,7 +358,7 @@
                     </div>
                 </li>
 
-                <li class="bookshelf__list__item" id="Existing">
+                <li class="bookshelf__list__item bookshelf__list__item--active" id="Existing">
                     <input class="bookshelf__checkbox" type="checkbox">
                     <div class=" bookshelf__bookinfo bookinfo">
 
@@ -400,7 +401,7 @@
                     </div>
                 </li>
 
-                <li class="bookshelf__list__item" id="Existing">
+                <li class="bookshelf__list__item bookshelf__list__item--active" id="Existing">
                     <input class="bookshelf__checkbox" type="checkbox">
                     <div class=" bookshelf__bookinfo bookinfo">
 
@@ -443,7 +444,7 @@
                     </div>
                 </li>
 
-                <li class="bookshelf__list__item" id="Existing">
+                <li class="bookshelf__list__item bookshelf__list__item--active" id="Existing">
                     <input class="bookshelf__checkbox" type="checkbox">
                     <div class=" bookshelf__bookinfo bookinfo">
 
@@ -486,7 +487,7 @@
                     </div>
                 </li>
 
-                <li class="bookshelf__list__item" id="Existing">
+                <li class="bookshelf__list__item bookshelf__list__item--active" id="Existing">
                     <input class="bookshelf__checkbox" type="checkbox">
                     <div class=" bookshelf__bookinfo bookinfo">
 
@@ -529,7 +530,7 @@
                     </div>
                 </li>
 
-                <li class="bookshelf__list__item" id="Existing">
+                <li class="bookshelf__list__item bookshelf__list__item--active" id="Existing">
                     <input class="bookshelf__checkbox" type="checkbox">
                     <div class=" bookshelf__bookinfo bookinfo">
 
@@ -572,7 +573,7 @@
                     </div>
                 </li>
 
-                <li class="bookshelf__list__item" id="Existing">
+                <li class="bookshelf__list__item bookshelf__list__item--active" id="Existing">
                     <input class="bookshelf__checkbox" type="checkbox">
                     <div class=" bookshelf__bookinfo bookinfo">
 
@@ -774,11 +775,18 @@
 
                     </div>
                 </li>
+            </ul>
         </div>
 
         <div class="bookshelf__right">
         </div>
 
     </div>
+
+    <div class="background">
+        <div class="background__top background__top--bookshelf"></div>
+        <div class="background__bottom background__bottom--bookshelf"></div>
+    </div>
 </body>
+    <script src="javascript/bookshelf.js"></script>
 </html>
