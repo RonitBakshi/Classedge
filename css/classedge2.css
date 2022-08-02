@@ -10,7 +10,6 @@ a {
 }
 
 body {
-  padding: 72px 0 0 80px;
   background-color: #FAFCE6;
 }
 
@@ -148,6 +147,10 @@ body {
   height: 104px;
   display: flex;
   align-items: center;
+  position: fixed;
+  top: 72px;
+  left: 80px;
+  right: 0;
   gap: 16px;
   padding-left: 56px;
   padding-right: 54px;
@@ -190,6 +193,12 @@ body {
 }
 
 .mydesk {
+  position: fixed;
+  top: 176px;
+  left: 80px;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
   display: grid;
   padding: 0 54px 54px 57px;
   gap: 24px;
@@ -242,26 +251,28 @@ body {
 }
 
 .bookshelf {
+  position: fixed;
+  top: 176px;
+  left: 80px;
+  right: 0;
+  bottom: 0px;
   background-color: #F7F8FA;
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  padding: 0 54px 0 57px;
+  padding: 0 54px 54px 57px;
   gap: 20px;
-  height: 700px;
 }
 .bookshelf__left {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 16px;
 }
 .bookshelf__searchbar {
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.0784313725);
+  margin-bottom: 16px;
 }
 .bookshelf__tabbar {
-  width: 100%;
-  height: 48px;
+  min-height: 48px;
   display: flex;
   justify-content: start;
 }
@@ -284,28 +295,44 @@ body {
 .bookshelf__list {
   display: flex;
   flex-direction: column;
+  overflow-y: hidden;
+  overflow: auto;
+  padding: 16px 0;
   gap: 16px;
   list-style: none;
+  height: 100%;
 }
 .bookshelf__list__item {
-  height: 128px;
+  min-height: 128px;
   list-style: none;
   display: flex;
   align-items: center;
   gap: 8px;
 }
+.bookshelf__list__item--active {
+  display: block;
+}
 .bookshelf__list__header {
-  height: 40px;
+  min-height: 40px;
   display: flex;
   align-items: center;
   justify-content: start;
+  gap: 16px;
 }
 .bookshelf__list__header__h1 {
-  padding-inline: 16px;
   font-size: 12px;
   color: #7486A3;
   font-weight: 400;
   flex: 1;
+}
+.bookshelf__list__header__btn {
+  min-width: 24px;
+  min-height: 24px;
+  margin-right: 16px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #7486A3;
 }
 .bookshelf__checkbox {
   height: 18px;
@@ -327,10 +354,14 @@ body {
 }
 
 .bookdetails {
+  position: fixed;
+  top: 176px;
+  left: 80px;
+  bottom: 0;
+  right: 0;
   background-color: #F7F8FA;
   display: flex;
   justify-content: space-between;
-  width: 100%;
   padding: 0 54px 54px 57px;
   gap: 24px;
 }
@@ -340,6 +371,7 @@ body {
   box-shadow: 0px 0px 12px rgba(40, 58, 94, 0.1215686275);
   border-radius: 16px;
   padding: 76px 100px;
+  overflow: auto;
 }
 .bookdetails__card {
   display: flex;
@@ -349,8 +381,8 @@ body {
 }
 .bookdetails__card__btn {
   font-size: 20px;
-  height: 24px;
-  width: 24px;
+  min-height: 24px;
+  min-width: 24px;
   background: none;
   border: none;
   display: flex;
@@ -359,6 +391,15 @@ body {
   margin-right: 5px;
   cursor: pointer;
   color: #7486A3;
+}
+.bookdetails__card__thumbnail {
+  min-height: 40px;
+  min-width: 40px;
+  background-color: #ffd500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
 }
 .bookdetails__card__content {
   flex: 1;
@@ -408,8 +449,8 @@ body {
   min-width: max-content;
 }
 .bookdetails__checkbox {
-  height: 18px;
-  width: 18px;
+  min-height: 18px;
+  min-width: 18px;
   border-radius: 2px;
   margin: 0 3px;
 }
@@ -434,6 +475,9 @@ body {
   background-color: #FFFFFF;
   width: 100%;
   height: 48px;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
   border-style: solid;
   border-radius: 8px;
   border-width: 1px;
@@ -489,36 +533,52 @@ body {
   flex: 1;
 }
 .bookinfo__tag {
-  gap: 16px;
   width: 100%;
   display: flex;
-  align-items: center;
+  justify-content: space-between;
   height: 24px;
   min-width: -webkit-max-content;
   min-width: -moz-max-content;
   min-width: max-content;
 }
+.bookinfo__tag__left {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.bookinfo__tag__right {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
 .bookinfo__tag__subject {
   min-width: -webkit-max-content;
   min-width: -moz-max-content;
   min-width: max-content;
-  background-color: #ffd500;
   border-radius: 4px;
   color: white;
   font-size: 14px;
   height: 24px;
   padding: 3px 8px;
 }
+.bookinfo__tag__subject--science {
+  background-color: #ffd500;
+}
+.bookinfo__tag__subject--math {
+  background-color: #ff55aa;
+}
 .bookinfo__tag__class {
   font-size: 12px;
   color: #7486A3;
-  flex: 1;
 }
 .bookinfo__tag__btn {
   min-width: 24px;
   height: 24px;
   background: none;
   border: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   font-size: 24px;
   color: #0394FF;
   cursor: pointer;
@@ -540,6 +600,9 @@ body {
 }
 .bookinfo__info__resources {
   color: #7486A3;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
 }
 .bookinfo__info__devider {
   color: #E7EAEF;
@@ -550,4 +613,8 @@ body {
   min-width: -webkit-max-content;
   min-width: -moz-max-content;
   min-width: max-content;
+}
+
+.material-icons.white {
+  color: white;
 }/*# sourceMappingURL=classedge2.css.map */

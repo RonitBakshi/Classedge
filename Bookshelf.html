@@ -8,9 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <link rel="stylesheet" href="css/classedge2.css">
-    <title>Class edge</title>
+    <title>Bookshelf</title>
 </head>
 <body>
     <header class="header">
@@ -170,7 +171,7 @@
             </div>
 
             <div class="bookshelf__tabbar">
-                <div class="bookshelf__tabbar__tab bookshelf__tabbar__tab--active" style="border-bottom: 2px solid black;">Existing</div>
+                <div class="bookshelf__tabbar__tab bookshelf__tabbar__tab--active">Existing</div>
                 <div class="bookshelf__tabbar__tab">Created</div>
             </div>
 
@@ -179,27 +180,36 @@
                 <li class="bookshelf__list__header">
                     <input class="bookshelf__checkbox" type="checkbox">
                     <h1 class="bookshelf__list__header__h1">
-                        Existing Books(10)
+                        Existing Books (10)
                     </h1>
+                    <button class="bookshelf__list__header__btn">
+                        <span class="material-icons">
+                            expand_more
+                        </span>
+                    </button>
                 </li>
 
-                <li class="bookshelf__list__item">
+                <li class="bookshelf__list__item" id="Existing">
                     <input class="bookshelf__checkbox" type="checkbox">
                     <div class=" bookshelf__bookinfo bookinfo">
 
                         <div class="bookinfo__tag"> 
 
-                            <div class="bookinfo__tag__subject">
-                                SCI
+                            <div class="bookinfo__tag__left">
+                                <div class="bookinfo__tag__subject bookinfo__tag__subject--science">
+                                    SCI
+                                </div>
+
+                                <p class="bookinfo__tag__class">
+                                    class 8
+                                </p>
                             </div>
 
-                            <p class="bookinfo__tag__class">
-                                class 8
-                            </p>
-
-                            <button class="bookinfo__tag__btn">
-                                <img src="assets/pin-angle-fill.svg" alt="">
-                            </button>
+                            <div class="bookinfo__tag__right">
+                                <button class="bookinfo__tag__btn">
+                                    <img src="assets/pin-angle-fill.svg" alt="">
+                                </button>
+                            </div>
 
                         </div>
 
@@ -222,23 +232,27 @@
                     </div>
                 </li>
 
-                <li class="bookshelf__list__item">
+                <li class="bookshelf__list__item" id="Existing">
                     <input class="bookshelf__checkbox" type="checkbox">
-                    <div class="bookshelf__bookinfo bookinfo">
+                    <div class=" bookshelf__bookinfo bookinfo">
 
                         <div class="bookinfo__tag"> 
 
-                            <div class="bookinfo__tag__subject">
-                                SCI
+                            <div class="bookinfo__tag__left">
+                                <div class="bookinfo__tag__subject bookinfo__tag__subject--science">
+                                    SCI
+                                </div>
+
+                                <p class="bookinfo__tag__class">
+                                    class 8
+                                </p>
                             </div>
-
-                            <p class="bookinfo__tag__class">
-                                class 8
-                            </p>
-
-                            <button class="bookinfo__tag__btn">
-                                <img src="assets/pin-angle-fill.svg" alt="">
-                            </button>
+                            
+                            <div class="bookinfo__tag__right">
+                                <button class="bookinfo__tag__btn">
+                                    <img src="assets/pin-angle-fill.svg" alt="">
+                                </button>
+                            </div>
 
                         </div>
 
@@ -260,7 +274,506 @@
 
                     </div>
                 </li>
-            </ul>
+
+                <li class="bookshelf__list__item" id="Existing">
+                    <input class="bookshelf__checkbox" type="checkbox">
+                    <div class=" bookshelf__bookinfo bookinfo">
+
+                        <div class="bookinfo__tag"> 
+
+                            <div class="bookinfo__tag__left">
+                                <div class="bookinfo__tag__subject bookinfo__tag__subject--math">
+                                    MATH
+                                </div>
+
+                                <p class="bookinfo__tag__class">
+                                    class 9
+                                </p>
+                            </div>
+                            
+                            <div class="bookinfo__tag__right">
+                                <button class="bookinfo__tag__btn">
+                                    <img src="assets/pin-angle-fill.svg" alt="">
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <h1 class="bookinfo__header">
+                            Book by R.S. Aggarwal
+                        </h1>
+
+                        <div class="bookinfo__info">
+                            <p class="bookinfo__info__resources">
+                                32 added resources
+                            </p>
+                            <p class="bookinfo__info__devider">
+                                |
+                            </p>
+                            <p class="bookinfo__info__lastmodified">
+                                Modified 3d ago
+                            </p>
+                        </div>
+
+                    </div>
+                </li>
+
+                <li class="bookshelf__list__item" id="Existing">
+                    <input class="bookshelf__checkbox" type="checkbox">
+                    <div class=" bookshelf__bookinfo bookinfo">
+
+                        <div class="bookinfo__tag"> 
+
+                            <div class="bookinfo__tag__left">
+                                <p class="bookinfo__tag__class">
+                                    class 10
+                                </p>
+                            </div>
+                            
+                            <div class="bookinfo__tag__right">
+                                <button class="bookinfo__tag__btn">
+                                    <img src="assets/pin-angle-fill.svg" alt="">
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <h1 class="bookinfo__header">
+                            Question Bank
+                        </h1>
+
+                        <div class="bookinfo__info">
+                            <p class="bookinfo__info__resources">
+                                41 added resources
+                            </p>
+                            <p class="bookinfo__info__devider">
+                                |
+                            </p>
+                            <p class="bookinfo__info__lastmodified">
+                                Modified 4d ago
+                            </p>
+                        </div>
+
+                    </div>
+                </li>
+
+                <li class="bookshelf__list__item" id="Existing">
+                    <input class="bookshelf__checkbox" type="checkbox">
+                    <div class=" bookshelf__bookinfo bookinfo">
+
+                        <div class="bookinfo__tag"> 
+
+                            <div class="bookinfo__tag__left">
+                                <div class="bookinfo__tag__subject bookinfo__tag__subject--math">
+                                    MATH
+                                </div>
+
+                                <p class="bookinfo__tag__class">
+                                    class 10
+                                </p>
+                            </div>
+                            
+                            <div class="bookinfo__tag__right">
+                                <button class="bookinfo__tag__btn">
+                                    <img src="assets/pin-angle-fill.svg" alt="">
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <h1 class="bookinfo__header">
+                            Book by R.D. Sharma
+                        </h1>
+
+                        <div class="bookinfo__info">
+                            <p class="bookinfo__info__resources">
+                                23 added resources
+                            </p>
+                            <p class="bookinfo__info__devider">
+                                |
+                            </p>
+                            <p class="bookinfo__info__lastmodified">
+                                Modified 4d ago
+                            </p>
+                        </div>
+
+                    </div>
+                </li>
+
+                <li class="bookshelf__list__item" id="Existing">
+                    <input class="bookshelf__checkbox" type="checkbox">
+                    <div class=" bookshelf__bookinfo bookinfo">
+
+                        <div class="bookinfo__tag"> 
+
+                            <div class="bookinfo__tag__left">
+                                <div class="bookinfo__tag__subject bookinfo__tag__subject--science">
+                                    SCI
+                                </div>
+
+                                <p class="bookinfo__tag__class">
+                                    class 6
+                                </p>
+                            </div>
+                            
+                            <div class="bookinfo__tag__right">
+                                <button class="bookinfo__tag__btn">
+                                    <img src="assets/pin-angle-fill.svg" alt="">
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <h1 class="bookinfo__header">
+                            NCERT Book
+                        </h1>
+
+                        <div class="bookinfo__info">
+                            <p class="bookinfo__info__resources">
+                                15 added resources
+                            </p>
+                            <p class="bookinfo__info__devider">
+                                |
+                            </p>
+                            <p class="bookinfo__info__lastmodified">
+                                Modified 5d ago
+                            </p>
+                        </div>
+
+                    </div>
+                </li>
+
+                <li class="bookshelf__list__item" id="Existing">
+                    <input class="bookshelf__checkbox" type="checkbox">
+                    <div class=" bookshelf__bookinfo bookinfo">
+
+                        <div class="bookinfo__tag"> 
+
+                            <div class="bookinfo__tag__left">
+                                <div class="bookinfo__tag__subject bookinfo__tag__subject--science">
+                                    SCI
+                                </div>
+
+                                <p class="bookinfo__tag__class">
+                                    class 9
+                                </p>
+                            </div>
+                            
+                            <div class="bookinfo__tag__right">
+                                <button class="bookinfo__tag__btn">
+                                    <img src="assets/pin-angle-fill.svg" alt="">
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <h1 class="bookinfo__header">
+                            NCERT Book
+                        </h1>
+
+                        <div class="bookinfo__info">
+                            <p class="bookinfo__info__resources">
+                                15 added resources
+                            </p>
+                            <p class="bookinfo__info__devider">
+                                |
+                            </p>
+                            <p class="bookinfo__info__lastmodified">
+                                Modified 5d ago
+                            </p>
+                        </div>
+
+                    </div>
+                </li>
+
+                <li class="bookshelf__list__item" id="Existing">
+                    <input class="bookshelf__checkbox" type="checkbox">
+                    <div class=" bookshelf__bookinfo bookinfo">
+
+                        <div class="bookinfo__tag"> 
+
+                            <div class="bookinfo__tag__left">
+                                <div class="bookinfo__tag__subject bookinfo__tag__subject--math">
+                                    MATH
+                                </div>
+
+                                <p class="bookinfo__tag__class">
+                                    class 6
+                                </p>
+                            </div>
+                            
+                            <div class="bookinfo__tag__right">
+                                <button class="bookinfo__tag__btn">
+                                    <img src="assets/pin-angle-fill.svg" alt="">
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <h1 class="bookinfo__header">
+                            Book by R.D. Sharma
+                        </h1>
+
+                        <div class="bookinfo__info">
+                            <p class="bookinfo__info__resources">
+                                23 added resources
+                            </p>
+                            <p class="bookinfo__info__devider">
+                                |
+                            </p>
+                            <p class="bookinfo__info__lastmodified">
+                                Modified 5d ago
+                            </p>
+                        </div>
+
+                    </div>
+                </li>
+
+                <li class="bookshelf__list__item" id="Existing">
+                    <input class="bookshelf__checkbox" type="checkbox">
+                    <div class=" bookshelf__bookinfo bookinfo">
+
+                        <div class="bookinfo__tag"> 
+
+                            <div class="bookinfo__tag__left">
+                                <div class="bookinfo__tag__subject bookinfo__tag__subject--science">
+                                    SCI
+                                </div>
+
+                                <p class="bookinfo__tag__class">
+                                    class 8
+                                </p>
+                            </div>
+                            
+                            <div class="bookinfo__tag__right">
+                                <button class="bookinfo__tag__btn">
+                                    <img src="assets/pin-angle-fill.svg" alt="">
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <h1 class="bookinfo__header">
+                            NCERT Book
+                        </h1>
+
+                        <div class="bookinfo__info">
+                            <p class="bookinfo__info__resources">
+                                27 added resources
+                            </p>
+                            <p class="bookinfo__info__devider">
+                                |
+                            </p>
+                            <p class="bookinfo__info__lastmodified">
+                                Modified 6d ago
+                            </p>
+                        </div>
+
+                    </div>
+                </li>
+
+                <li class="bookshelf__list__item" id="Existing">
+                    <input class="bookshelf__checkbox" type="checkbox">
+                    <div class=" bookshelf__bookinfo bookinfo">
+
+                        <div class="bookinfo__tag"> 
+
+                            <div class="bookinfo__tag__left">
+                                <div class="bookinfo__tag__subject bookinfo__tag__subject--math">
+                                    MATH
+                                </div>
+
+                                <p class="bookinfo__tag__class">
+                                    class 9
+                                </p>
+                            </div>
+                            
+                            <div class="bookinfo__tag__right">
+                                <button class="bookinfo__tag__btn">
+                                    <img src="assets/pin-angle-fill.svg" alt="">
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <h1 class="bookinfo__header">
+                            Book by R.D. Sharma
+                        </h1>
+
+                        <div class="bookinfo__info">
+                            <p class="bookinfo__info__resources">
+                                32 added resources
+                            </p>
+                            <p class="bookinfo__info__devider">
+                                |
+                            </p>
+                            <p class="bookinfo__info__lastmodified">
+                                Modified 6d ago
+                            </p>
+                        </div>
+
+                    </div>
+                </li>
+
+                <li class="bookshelf__list__item" id="Created">
+                    <input class="bookshelf__checkbox" type="checkbox">
+                    <div class=" bookshelf__bookinfo bookinfo">
+
+                        <div class="bookinfo__tag"> 
+
+                            <div class="bookinfo__tag__left">
+                                <div class="bookinfo__tag__subject bookinfo__tag__subject--math">
+                                    MATH
+                                </div>
+
+                                <p class="bookinfo__tag__class">
+                                    class 9
+                                </p>
+                            </div>
+                            
+                            <div class="bookinfo__tag__right">
+                                <button class="bookinfo__tag__btn">
+                                    <img src="assets/pin-angle-fill.svg" alt="">
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <h1 class="bookinfo__header">
+                            NCERT Book Refrences
+                        </h1>
+
+                        <div class="bookinfo__info">
+                            <p class="bookinfo__info__resources">
+                                15 added resources
+                            </p>
+                            <p class="bookinfo__info__devider">
+                                |
+                            </p>
+                            <p class="bookinfo__info__lastmodified">
+                                Modified 2d ago
+                            </p>
+                        </div>
+
+                    </div>
+                </li>
+
+                <li class="bookshelf__list__item" id="Created">
+                    <input class="bookshelf__checkbox" type="checkbox">
+                    <div class=" bookshelf__bookinfo bookinfo">
+
+                        <div class="bookinfo__tag"> 
+
+                            <div class="bookinfo__tag__left">
+                                <p class="bookinfo__tag__class">
+                                    class 10
+                                </p>
+                            </div>
+                            
+                            <div class="bookinfo__tag__right">
+                                <button class="bookinfo__tag__btn">
+                                    <img src="assets/pin-angle-fill.svg" alt="">
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <h1 class="bookinfo__header">
+                            Practice Test Papers
+                        </h1>
+
+                        <div class="bookinfo__info">
+                            <p class="bookinfo__info__resources">
+                                82 added resources
+                            </p>
+                            <p class="bookinfo__info__devider">
+                                |
+                            </p>
+                            <p class="bookinfo__info__lastmodified">
+                                Modified 3d ago
+                            </p>
+                        </div>
+
+                    </div>
+                </li>
+
+                <li class="bookshelf__list__item" id="Created">
+                    <input class="bookshelf__checkbox" type="checkbox">
+                    <div class=" bookshelf__bookinfo bookinfo">
+
+                        <div class="bookinfo__tag"> 
+
+                            <div class="bookinfo__tag__left">
+                                <div class="bookinfo__tag__subject bookinfo__tag__subject--science">
+                                    SCI
+                                </div>
+                            </div>
+                            
+                            <div class="bookinfo__tag__right">
+                                <button class="bookinfo__tag__btn">
+                                    <img src="assets/pin-angle-fill.svg" alt="">
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <h1 class="bookinfo__header">
+                            NCERT Book Refrences
+                        </h1>
+
+                        <div class="bookinfo__info">
+                            <p class="bookinfo__info__resources">
+                                07 added resources
+                            </p>
+                            <p class="bookinfo__info__devider">
+                                |
+                            </p>
+                            <p class="bookinfo__info__lastmodified">
+                                Modified 4d ago
+                            </p>
+                        </div>
+
+                    </div>
+                </li>
+
+                <li class="bookshelf__list__item" id="Created">
+                    <input class="bookshelf__checkbox" type="checkbox">
+                    <div class=" bookshelf__bookinfo bookinfo">
+
+                        <div class="bookinfo__tag"> 
+
+                            <div class="bookinfo__tag__left">
+                                <p class="bookinfo__tag__class">
+                                    class 10
+                                </p>
+                            </div>
+                            
+                            <div class="bookinfo__tag__right">
+                                <button class="bookinfo__tag__btn">
+                                    <img src="assets/pin-angle-fill.svg" alt="">
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <h1 class="bookinfo__header">
+                            Additional Info
+                        </h1>
+
+                        <div class="bookinfo__info">
+                            <p class="bookinfo__info__resources">
+                                52 added resources
+                            </p>
+                            <p class="bookinfo__info__devider">
+                                |
+                            </p>
+                            <p class="bookinfo__info__lastmodified">
+                                Modified 6d ago
+                            </p>
+                        </div>
+
+                    </div>
+                </li>
         </div>
 
         <div class="bookshelf__right">
