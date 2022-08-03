@@ -73,6 +73,12 @@ a {
   min-width: -moz-max-content;
   min-width: max-content;
 }
+.header__profile__btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #FFFFFF;
+}
 .header__right {
   display: flex;
   align-items: center;
@@ -139,6 +145,7 @@ a {
   display: flex;
   align-items: center;
   position: fixed;
+  z-index: 10;
   top: 72px;
   left: 80px;
   right: 0;
@@ -147,7 +154,9 @@ a {
   padding-right: 54px;
 }
 .titlebar__btn {
+  max-width: 40px;
   min-width: 40px;
+  position: relative;
   background-color: #FFFFFF;
   color: #0377FF;
   display: flex;
@@ -250,12 +259,13 @@ a {
   right: 0;
   bottom: 0px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 0 54px 54px 57px;
   gap: 20px;
 }
 .bookshelf__left {
   flex: 1;
+  max-width: 1000px;
   display: flex;
   flex-direction: column;
 }
@@ -293,6 +303,11 @@ a {
   gap: 16px;
   list-style: none;
   height: 100%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.bookshelf__list::-webkit-scrollbar {
+  display: none;
 }
 .bookshelf__list__item {
   min-height: 128px;
@@ -349,23 +364,33 @@ a {
 }
 
 .bookdetails {
+  justify-content: space-around;
   position: fixed;
+  display: flex;
   top: 176px;
   left: 80px;
   bottom: 0;
   right: 0;
-  display: flex;
-  justify-content: space-between;
+  z-index: 1;
   padding: 0 54px 54px 57px;
   gap: 24px;
 }
 .bookdetails__left {
+  max-width: 1000px;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
   flex: 1;
   background-color: #FFFFFF;
   box-shadow: 0px 0px 12px rgba(40, 58, 94, 0.1215686275);
   border-radius: 16px;
   padding: 76px 100px;
-  overflow: auto;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.bookdetails__left::-webkit-scrollbar {
+  display: none;
 }
 .bookdetails__card {
   display: none;
@@ -631,10 +656,6 @@ a {
   min-width: max-content;
 }
 
-.material-icons.white {
-  color: white;
-}
-
 .background__top {
   position: fixed;
   height: 104px;
@@ -670,4 +691,45 @@ a {
 }
 .background__bottom--bookdetails {
   background-color: #F7F8FA;
+}
+
+.expansion {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  padding: 8px 0;
+  top: 30px;
+  right: 0;
+  background-color: #FFFFFF;
+  width: 240px;
+  box-shadow: 0px 0px 12px rgba(40, 58, 94, 0.1215686275);
+  border-radius: 16px;
+}
+.expansion--active {
+  display: flex;
+}
+.expansion__element {
+  padding-inline: 16px;
+  gap: 16px;
+  display: flex;
+  height: 56px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+}
+.expansion__element__icon {
+  height: 24px;
+  width: 24px;
+  color: #0394FF;
+}
+.expansion__element__icon--delete {
+  color: #D12B3D;
+}
+.expansion__element__name {
+  font-size: 16px;
+  color: #243A61;
+}
+.expansion__element__name--delete {
+  color: #D12B3D;
 }/*# sourceMappingURL=classedge2.css.map */

@@ -50,6 +50,8 @@ document.querySelector(".searchbar__btn").addEventListener("click",
     }
 )
 
+//Book Details Code 
+
 document.querySelectorAll(".bookdetails__card__btn").forEach(
     (cardButton) => {
         cardButton.addEventListener("click",
@@ -72,4 +74,8 @@ document.querySelectorAll(".bookdetails__card__btn").forEach(
             }
         )
     }
+)
+
+document.getElementById("overflowbtn").addEventListener("click",
+    () => document.querySelector(".expansion").classList.toggle("expansion--active")
 )

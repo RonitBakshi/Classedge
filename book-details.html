@@ -38,6 +38,9 @@
                     <h1 class="header__profile__content__h1">MES High School</h1>
                     <p class="header__profile__content__p">Baramati</p>
                 </div>
+                <button class="header__profile__btn material-icons">
+                    unfold_more
+                </button>
             </div>
         </div>
         
@@ -46,6 +49,9 @@
                 <h1 class="header__profile__content__h1">Name Surname</h1>
                 <p class="header__profile__content__p">User Role</p>
             </div>
+            <button class="header__profile__btn material-icons">
+                unfold_more
+            </button>
             <img class="header__profile__img" src="assets/babydriver1.png" alt="school logo">
         </div>
 
@@ -130,14 +136,81 @@
             Book Details
         </div>
 
-        <button class="titlebar__btn">
-            <span class="material-icons outlined">
-                info
-            </span>
+        <button class="titlebar__btn material-icons">
+            info_outline
         </button>
 
-        <button class="titlebar__btn material-icons">
-            more_vert
+        <button class="titlebar__btn" id="overflowbtn">
+
+            <span class="material-icons">
+                more_vert
+            </span>
+
+            <div class="expansion">
+                <div class="expansion__element">
+                    <span class="expansion__element__icon material-icons">
+                        edit
+                    </span>
+                    <p class="expansion__element__name">
+                        Rename
+                    </p>
+                </div>
+
+                <div class="expansion__element">
+                    <span class="expansion__element__icon material-icons">
+                        assignment
+                    </span>
+                    <p class="expansion__element__name">
+                        Assign
+                    </p>
+                </div>
+
+                <div class="expansion__element">
+                    <span class="expansion__element__icon material-icons">
+                        low_priority
+                    </span>
+                    <p class="expansion__element__name">
+                        Reorder
+                    </p>
+                </div>
+
+                <div class="expansion__element">
+                    <span class="expansion__element__icon material-icons">
+                        file_copy
+                    </span>
+                    <p class="expansion__element__name">
+                        Duplicate
+                    </p>
+                </div>
+
+                <div class="expansion__element">
+                    <span class="expansion__element__icon material-icons">
+                        print
+                    </span>
+                    <p class="expansion__element__name">
+                        Print
+                    </p>
+                </div>
+
+                <div class="expansion__element">
+                    <span class="expansion__element__icon material-icons">
+                        share
+                    </span>
+                    <p class="expansion__element__name">
+                        Share
+                    </p>
+                </div>
+
+                <div class="expansion__element">
+                    <span class="expansion__element__icon expansion__element__icon--delete material-icons">
+                        delete
+                    </span>
+                    <p class="expansion__element__name expansion__element__name--delete">
+                        Delete
+                    </p>
+                </div>
+            </div>
+
         </button>
 
         <button class="titlebar__primary">

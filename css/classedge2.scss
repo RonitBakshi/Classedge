@@ -10,6 +10,7 @@ $carbon: #7486A3;
 $blue: #6D5BCB;
 $btnblue: #0394FF;
 $smog: #E7EAEF;
+$red: #D12B3D;
 
 
 * {
@@ -97,6 +98,13 @@ a {
                 min-width: max-content;
             } 
         }
+
+        &__btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: $white;
+        }
     }
 
     &__right {
@@ -172,6 +180,7 @@ a {
     display: flex;
     align-items: center;
     position: fixed;
+    z-index: 10;
     top: 72px;
     left: 80px;
     right: 0;
@@ -180,7 +189,9 @@ a {
     padding-right: 54px;
 
     &__btn {
+        max-width: 40px;
         min-width: 40px;
+        position: relative;
         background-color: $white;
         color: #0377FF;
         display: flex;
@@ -283,12 +294,13 @@ a {
     right: 0;
     bottom: 0px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 0 54px 54px 57px;
     gap: 20px;
 
     &__left {
         flex: 1;
+        max-width: 1000px;
         display: flex;
         flex-direction: column;
     }
@@ -331,6 +343,13 @@ a {
         gap: 16px;
         list-style: none;
         height: 100%;
+
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar{
+            display: none;
+        }
 
         &__item {
             min-height: 128px;
@@ -398,23 +417,32 @@ a {
 }
 
 .bookdetails {
+    justify-content: space-around;
     position: fixed;
+    display: flex;
     top: 176px;
     left: 80px;
     bottom: 0;
     right: 0;
-    display: flex;
-    justify-content: space-between;
+    z-index: 1;
     padding: 0 54px 54px 57px;
     gap: 24px;
 
     &__left {
+        max-width: 1000px;
+        min-width: max-content;
         flex: 1;
         background-color: $white;
         box-shadow: 0px 0px 12px #283A5E1F;
         border-radius: 16px;
         padding: 76px 100px;
-        overflow: auto;
+        overflow-y: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar{
+            display: none;
+        }
     }
 
     &__card {
@@ -687,10 +715,6 @@ a {
     }
 }
 
-.material-icons.white {
-    color: white;
-}
-
 .background {
 
     &__top {
@@ -734,6 +758,53 @@ a {
 
         &--bookdetails {
             background-color: $background_white;
+        }
+    }
+}
+
+.expansion {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    padding: 8px 0;
+    top: 30px;
+    right: 0;
+    background-color: $white;
+    width: 240px;
+    box-shadow: 0px 0px 12px #283A5E1F;
+    border-radius: 16px;
+
+    &--active {
+        display: flex;
+    }
+    
+    &__element {
+        padding-inline: 16px;
+        gap: 16px;
+        display: flex;
+        height: 56px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        align-items: center;
+
+        &__icon {
+            height: 24px;
+            width: 24px;
+            color: $btnblue;
+
+            &--delete {
+                color: $red;
+            }
+        }
+
+        &__name {
+            font-size: 16px;
+            color: $cobalt;
+
+            &--delete {
+                color: $red;
+            }
         }
     }
 }
