@@ -336,9 +336,9 @@ a {
     }
 
     &__list {
+        overflow: auto;
         display: flex;
         flex-direction: column;
-        overflow: auto;
         padding: 16px 0;
         gap: 16px;
         list-style: none;
