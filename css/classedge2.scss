@@ -12,7 +12,6 @@ $btnblue: #0394FF;
 $smog: #E7EAEF;
 $red: #D12B3D;
 
-
 * {
     font-family: rubik;
     box-sizing: border-box;
@@ -27,6 +26,7 @@ a {
 
 .header {
     background-color: $cobalt;
+    z-index: 0;
     height: 72px;
     position: fixed; 
     right: 0;
@@ -116,6 +116,7 @@ a {
 }
 
 .nav {
+    z-index: 0;
     background-color: $white;
     width: 80px;
     position: fixed;
@@ -176,11 +177,11 @@ a {
 }
 
 .titlebar {
+    z-index: 1;
     height: 104px;
     display: flex;
     align-items: center;
     position: fixed;
-    z-index: 10;
     top: 72px;
     left: 80px;
     right: 0;
@@ -230,6 +231,7 @@ a {
 }
 
 .mydesk {
+    z-index: 0;
     position: fixed;
     top: 176px;
     left: 80px;
@@ -239,6 +241,7 @@ a {
     display: grid;
     padding: 0 54px 54px 57px;
     gap: 24px;
+    min-width: max-content;
 
     @media (max-width: 1000px) {
         grid-template-columns: 1fr;
@@ -288,6 +291,7 @@ a {
 }
 
 .bookshelf {
+    z-index: 0;
     position: fixed;
     top: 176px;
     left: 80px;
@@ -297,6 +301,7 @@ a {
     justify-content: space-around;
     padding: 0 54px 54px 57px;
     gap: 20px;
+    min-width: max-content;
 
     &__left {
         flex: 1;
@@ -417,6 +422,8 @@ a {
 }
 
 .bookdetails {
+    z-index: 0;
+    min-width: max-content;
     justify-content: space-around;
     position: fixed;
     display: flex;
@@ -424,7 +431,6 @@ a {
     left: 80px;
     bottom: 0;
     right: 0;
-    z-index: 1;
     padding: 0 54px 54px 57px;
     gap: 24px;
 
@@ -716,6 +722,12 @@ a {
 }
 
 .background {
+    z-index: -10;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 
     &__top {
         position: fixed;
@@ -723,7 +735,6 @@ a {
         top: 72px;
         left: 80px;
         right: 0;
-        z-index: -10;
 
         &--mydesk {
             background-image: linear-gradient($green,$lightyellow);
@@ -745,7 +756,6 @@ a {
         left: 80px;
         bottom: 0;
         right: 0;
-        z-index: -10;
 
         &--mydesk {
             background-color: $lightyellow;
@@ -769,6 +779,7 @@ a {
     padding: 8px 0;
     top: 30px;
     right: 0;
+    z-index: 2;
     background-color: $white;
     width: 240px;
     box-shadow: 0px 0px 12px #283A5E1F;
@@ -796,6 +807,10 @@ a {
             &--delete {
                 color: $red;
             }
+
+            &--rhino {
+                color: $Rhino;
+            }
         }
 
         &__name {
@@ -805,6 +820,454 @@ a {
             &--delete {
                 color: $red;
             }
+
+            &--rhino {
+                color: $Rhino;
+            }
         }
+    }
+}
+
+.bookbuilder {
+    justify-content: space-around;
+    z-index: 0;
+    position: fixed;
+    display: flex;
+    top: 176px;
+    left: 80px;
+    bottom: 0;
+    right: 0;
+    padding: 0 54px 54px 57px;
+    gap: 24px;
+    min-width: max-content;
+
+    &__left {
+        max-width: 1000px;
+        flex: 1;
+        background-color: $white;
+        box-shadow: 0px 0px 12px #283A5E1F;
+        border-radius: 16px;
+        padding: 76px 100px;
+        overflow-y: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar{
+            display: none;
+        }
+    }
+
+    &__right {
+        min-width: 376px;
+        background-color: $white;
+        border-radius: 16px;
+        box-shadow: 0px 0px 12px #283A5E1F;
+    }
+
+    &__inputelement {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 40px;
+
+        &__name {
+            font-size: 12px;
+            color: $carbon;
+            min-width: max-content;
+        }
+
+        &__bottom {
+            height: 48px;
+            border-style: solid;
+            border-radius: 8px;
+            border-width: 1px;
+            border-color: $Rhino;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-width: max-content;
+        }
+
+        &__input {
+            flex: 1;
+            border: none;
+            background: none;
+            height: 48px;
+            padding-top: 1px;
+            font-size: 16px;
+            padding-inline: 16px;
+            cursor: pointer;
+
+            &:focus {
+                outline: none;
+            } 
+
+            &::placeholder {
+                font-size: 16px;
+                color: $Rhino;
+            }
+        }
+
+        &__btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $btnblue;
+            border: none;
+            background: none;
+            width: 24px;
+            height: 24px;
+            margin: 12px;
+            cursor: pointer;
+        }
+    }
+
+    &__element {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 24px;
+        margin-top: 8px;
+        margin-bottom: 16px;
+
+        &__h1 {
+            font-size: 16px;
+            color: $cobalt;
+            min-width: max-content;
+        }
+
+        &__h2 {
+            font-size: 12px;
+            color: $carbon;
+            min-width: max-content;
+            font-weight: 400;
+        }
+
+        &__btn {
+            height: 24px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            gap: 8px;
+            border: none;
+            background: none;
+            min-width: max-content;
+            cursor: pointer;
+
+            &--carbon {
+                color: $carbon;
+            }
+
+            &--blue {
+                color: $btnblue;
+            }
+        }
+    }
+}
+
+.subjectlist {
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    max-height: min-content;
+    display: none;
+    z-index: 2;
+    position: fixed;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 16px;
+    width: 328px;
+    background-color: $white;
+    border-radius: 16px;
+    box-shadow: 0px 0px 12px #283A5E1F;
+    
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 52px;
+
+        &__name {
+            font-size: 20px;
+            color: $cobalt;
+        }
+
+        &__btn {
+            color: $cobalt;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+    }
+
+    &__division {
+        min-height: 52px;
+        display: none;
+        align-items: center;
+        font-size: 12px;
+        color: $carbon;
+
+        &--active {
+            display: flex;
+        }
+    }
+
+    &__item {
+        cursor: pointer;
+        min-height: 52px;
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+        color: $cobalt;
+        font-size: 16px;
+
+        &__icon {
+            display: none;
+            color: $cobalt;
+            height: 24px;
+            width: 24px;
+            font-weight: bold;
+
+            &--active {
+                display: flex;
+            }
+        }
+
+        &--active {
+            display: flex;
+        }
+    }
+
+    &__btn {
+        cursor: pointer;
+        display: none;
+        height: 52px;
+        font-size: 16px;
+        color: $btnblue;
+        border: none;
+        background: none;
+
+        &--active {
+            display: block;
+        }
+    }
+
+    &--active {
+        display: block;
+    }
+}
+
+.gradelist {
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+    z-index: 2;
+    position: absolute;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 16px;
+    width: 328px;
+    max-height: 608px;
+    overflow-y: auto;
+    background-color: $white;
+    border-radius: 16px;
+    box-shadow: 0px 0px 12px #283A5E1F;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
+    
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 52px;
+
+        &__name {
+            font-size: 20px;
+            color: $cobalt;
+        }
+
+        &__btn {
+            color: $cobalt;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+    }
+
+    &__division {
+        min-height: 52px;
+        display: none;
+        align-items: center;
+        font-size: 12px;
+        color: $carbon;
+
+        &--active {
+            display: flex;
+        }
+    }
+
+    &__item {
+        cursor: pointer;
+        display: none;
+        flex-direction: column;
+
+        &__top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 52px;
+            color: $cobalt;
+            font-size: 16px;
+        }
+
+        &__bottom {
+            display: flex;
+            align-items: center;
+            min-height: 52px;
+            gap: 8px;
+        }
+
+        &__icon {
+            display: none;
+            color: $cobalt;
+            height: 24px;
+            width: 24px;
+            font-weight: bold;
+
+            &--active {
+                display: flex;
+            }
+        }
+
+        &--active {
+            display: flex;
+        }
+
+        &__tag {
+            font-size: 12px;
+            background-color: $Rhino;
+            color: $white;
+            padding: 8px;
+            border-radius: 4px;
+        }
+    }
+
+    &__btn {
+        cursor: pointer;
+        display: none;
+        height: 52px;
+        font-size: 16px;
+        color: $btnblue;
+        border: none;
+        background: none;
+
+        &--active {
+            display: block;
+        }
+    }
+
+    &--active {
+        display: block;
+    }
+}
+
+.bookinput {
+    //display: none;
+    display: none;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    max-height: min-content;
+    z-index: 2;
+    position: fixed;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 16px;
+    width: 328px;
+    background-color: $white;
+    border-radius: 16px;
+    box-shadow: 0px 0px 12px #283A5E1F;
+    
+    &__header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 56px;
+        margin-bottom: 32px;
+
+        &__name {
+            font-size: 20px;
+            color: $cobalt;
+        }
+
+        &__btn {
+            color: $cobalt;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+    }
+
+    &__label {
+        color: $btnblue;
+        font-size: 12px;
+        flex: 1;
+        margin-bottom: 8px;
+    }
+
+    &__input {
+        width: 100%;
+        height: 120px;
+        padding: 16px;
+        border: 1px solid $btnblue;
+        border-radius: 8px;
+        margin-bottom: 4px;
+        font-size: 16px;
+        color: $cobalt;
+        resize: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__btn {
+        font-size: 14px;
+        width: 100%;
+        color: $white;
+        margin: 16px 0;
+        background-image: linear-gradient(#00B1FF,#0377FF);
+        height: 40px;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0px 4px 16px #00000014;
+        cursor: pointer;
+    }
+
+    &__lettercount {
+        font-size: 12px;
+        color: $carbon;
+        align-self: flex-end;
+        padding-inline: 16px;
+        margin-bottom: 32px;
+    }
+
+    &--active {
+        display: flex;
     }
 }

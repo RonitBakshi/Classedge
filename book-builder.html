@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/classedge2.css">
+
+    <title>Book Builder</title>
+</head>
+<body>
+    <header class="header">
+
+        <div class="header__left">
+
+            <button class="header__btn material-icons">
+                hexagon
+            </button>
+
+            <div class="header__logo">
+                <h1 class="header__logo__h1">class<span>edge</span></h1>
+                <p class="header__logo__p">app name here</p>
+            </div>
+
+            <p class="header__line">
+                |
+            </p>
+
+            <div class="header__profile">
+                <img class="header__profile__img" src="assets/babydriver1.png" alt="school logo">
+                <div class="header__profile__content">
+                    <h1 class="header__profile__content__h1">MES High School</h1>
+                    <p class="header__profile__content__p">Baramati</p>
+                </div>
+                <button class="header__profile__btn material-icons">
+                    unfold_more
+                </button>
+            </div>
+        </div>
+        
+        <div class="header__right">
+            <div class="header__profile__content"> 
+                <h1 class="header__profile__content__h1">Name Surname</h1>
+                <p class="header__profile__content__p">User Role</p>
+            </div>
+            <button class="header__profile__btn material-icons">
+                unfold_more
+            </button>
+            <img class="header__profile__img" src="assets/babydriver1.png" alt="school logo">
+        </div>
+
+    </header>
+
+    <nav class="nav">
+
+        <ul class="nav__ul">
+            
+            <li class="nav__li">
+                <button class="nav__btn material-icons">
+                    hexagon
+                </button>
+                <p class="nav__p">Planner</p>
+            </li>
+
+            <li class="nav__li">
+                <button class="nav__btn material-icons">
+                    hexagon
+                </button>
+                <p class="nav__p">Classes</p>
+            </li>
+
+            <li class="nav__li">
+                <button class="nav__btn nav__btn--active material-icons">
+                    hexagon
+                </button>
+                <p class="nav__p nav__p--active">My Desk</p>
+            </li>
+
+            <li class="nav__li">
+                <button class="nav__btn material-icons">
+                    hexagon
+                </button>
+                <p class="nav__p">Messages</p>
+            </li>
+
+            <li class="nav__li">
+                <button class="nav__btn">
+                    ...
+                </button>
+                <p class="nav__p">Notices</p>
+            </li>
+        </ul>
+
+        <ul class="nav__ul">
+
+            <li class="nav__li">
+                <button class="nav__btn material-icons">
+                    hexagon
+                </button>
+                <p class="nav__p">Contact us</p>
+            </li>
+
+            <li class="nav__li">
+                <button class="nav__btn material-icons">
+                    hexagon
+                </button>
+                <p class="nav__p">Settings</p>
+            </li>
+
+            <li class="nav__li">
+                <button class="nav__btn material-icons">
+                    hexagon
+                </button>
+                <p class="nav__p">Help</p>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <div class="titlebar">
+
+        <a href="bookshelf.html">
+            <button class="titlebar__btn material-icons">
+                arrow_back
+            </button>
+        </a>
+
+        <div class="titlebar__title">
+            Book Builder
+        </div>
+
+        <button class="titlebar__primary" id="Create-book">
+            <span class="material-icons">collections_bookmark</span>
+            <p class="titlebar__primary__p">Create Book</p>
+        </button>
+
+    </div>
+
+    <div class="bookbuilder">
+
+        <div class="bookbuilder__left">
+
+            <div class="bookbuilder__inputelement" id="Subject">
+                <p class="bookbuilder__inputelement__name">
+                    Subject
+                </p>
+                <div class="bookbuilder__inputelement__bottom">
+                    <input type="text" class="bookbuilder__inputelement__input" placeholder="Undefined" id="Subject-input" disabled>
+
+                    </input>
+                    <button class="bookbuilder__inputelement__btn material-icons">
+                        chevron_right
+                    </button>
+                </div>
+            </div>
+
+            <div class="bookbuilder__inputelement" id="Grade">
+                <p class="bookbuilder__inputelement__name">
+                    Grade
+                </p>
+                <div class="bookbuilder__inputelement__bottom">
+                    <input type="text" class="bookbuilder__inputelement__input" placeholder="Unassigned" id="Grade-input" disabled>
+
+                    </input>
+                    <button class="bookbuilder__inputelement__btn material-icons">
+                        chevron_right
+                    </button>
+                </div>
+            </div>
+
+            <div class="bookbuilder__element">
+                <h2 class="bookbuilder__element__h2">
+                    Table of contents(0)
+                </h2>
+                <button class="bookbuilder__element__btn bookbuilder__element__btn--blue expansion__btn" id="Add-btn">
+                    <span class="material-icons">add</span> Add
+
+                    <div class="expansion" id="Add-btn">
+                        <div class="expansion__element" id="add-section">
+                            <span class="expansion__element__icon material-icons">
+                                checklist_rtl
+                            </span>
+                            <p class="expansion__element__name">
+                                Section
+                            </p>
+                        </div>
+        
+                        <div class="expansion__element">
+                            <span class="expansion__element__icon material-icons">
+                                toc
+                            </span>
+                            <p class="expansion__element__name">
+                                Chapter
+                            </p>
+                        </div>
+        
+                        <div class="expansion__element">
+                            <span class="expansion__element__icon expansion__element__icon--rhino material-icons">
+                                segment
+                            </span>
+                            <p class="expansion__element__name expansion__element__name--rhino">
+                                Topic
+                            </p>
+                        </div>
+                    </div>
+                </button>
+            </div>
+
+            <div class="bookbuilder__element">
+                <h1 class="bookbuilder__element__h1">
+                    Default Section
+                </h1>
+                <button class="bookbuilder__element__btn bookbuilder__element__btn--carbon expansion__btn" id="Default-section-btn">
+                    <span class="material-icons">more_horiz</span>
+
+                    <div class="expansion" id="Default-section-btn">
+                        <div class="expansion__element">
+                            <span class="expansion__element__icon material-icons">
+                                toc
+                            </span>
+                            <p class="expansion__element__name">
+                                Add Chapter
+                            </p>
+                        </div>
+        
+                        <div class="expansion__element">
+                            <span class="expansion__element__icon material-icons">
+                                edit
+                            </span>
+                            <p class="expansion__element__name">
+                                Rename
+                            </p>
+                        </div>
+        
+                        <div class="expansion__element">
+                            <span class="expansion__element__icon material-icons">
+                                low_priority
+                            </span>
+                            <p class="expansion__element__name">
+                                Reorder
+                            </p>
+                        </div>
+
+                        <div class="expansion__element">
+                            <span class="expansion__element__icon material-icons">
+                                open_with
+                            </span>
+                            <p class="expansion__element__name">
+                                Move
+                            </p>
+                        </div>
+
+                        <div class="expansion__element">
+                            <span class="expansion__element__icon expansion__element__icon--delete material-icons">
+                                delete
+                            </span>
+                            <p class="expansion__element__name  expansion__element__name--delete">
+                                delete
+                            </p>
+                        </div>
+                    </div>
+                </button>
+            </div>
+
+        </div>
+
+        <div class="bookbuilder__right">
+
+        </div>
+    </div>
+
+    <ul class="subjectlist" id="Subject-List">
+        <li class="subjectlist__header">
+            <p class="subjectlist__header__name">
+                Subject List
+            </p>
+            <button class="subjectlist__header__btn material-icons">
+                close
+            </button>
+        </li>
+
+        <li class="subjectlist__division subjectlist__division--active" id="my-subject">
+            My Subjects
+        </li>
+
+        <li class="subjectlist__item subjectlist__item--active" id="my-subject">
+            <div class="subjectlist__item__subject"> 
+                Science
+            </div>
+            <span class="subjectlist__item__icon material-icons">done</span>
+        </li>
+
+        <li class="subjectlist__item subjectlist__item--active" id="my-subject">
+            <div class="subjectlist__item__subject"> 
+                Mathematics
+            </div>
+            <span class="subjectlist__item__icon material-icons">done</span>
+        </li>
+
+        <button class="subjectlist__btn subjectlist__btn--active">
+            Show All
+        </button>
+
+        <li class="subjectlist__division" id="other-subject">
+            Other Subjects
+        </li>
+
+        <li class="subjectlist__item" id="other-subject">
+            <div class="subjectlist__item__subject"> 
+                English Literature
+            </div>
+            <span class="subjectlist__item__icon material-icons">done</span>
+        </li>
+
+        <li class="subjectlist__item" id="other-subject">
+            <div class="subjectlist__item__subject"> 
+                English Language
+            </div>
+            <span class="subjectlist__item__icon material-icons">done</span>
+        </li>
+
+        <li class="subjectlist__item" id="other-subject">
+            <div class="subjectlist__item__subject"> 
+                Hindi Literature
+            </div>
+            <span class="subjectlist__item__icon material-icons">done</span>
+        </li>
+
+        <li class="subjectlist__item" id="other-subject">
+            <div class="subjectlist__item__subject"> 
+                Hindi Language
+            </div>
+            <span class="subjectlist__item__icon material-icons">done</span>
+        </li>
+
+        <li class="subjectlist__item" id="other-subject">
+            <div class="subjectlist__item__subject"> 
+                History
+            </div>
+            <span class="subjectlist__item__icon material-icons">done</span>
+        </li>
+
+        <li class="subjectlist__item" id="other-subject">
+            <div class="subjectlist__item__subject"> 
+                Geography
+            </div>
+            <span class="subjectlist__item__icon material-icons">done</span>
+        </li>
+    </ul>
+
+    <ul class="gradelist" id="Grade-List">
+        <li class="gradelist__header">
+            <p class="gradelist__header__name">
+                Grade List
+            </p>
+            <button class="gradelist__header__btn material-icons">
+                close
+            </button>
+        </li>
+
+        <li class="gradelist__division gradelist__division--active" id="my-grade">
+            My Subjects
+        </li>
+
+        <li class="gradelist__item gradelist__item--active" id="my-grade">
+            <div class="gradelist__item__top">
+                <div class="gradelist__item__grade"> 
+                    Class 6
+                </div>
+                <span class="gradelist__item__icon material-icons">done</span>
+            </div>
+            <div class="gradelist__item__bottom">
+                <div class="gradelist__item__tag">
+                    6B
+                </div>
+                <div class="gradelist__item__tag">
+                    6C
+                </div>
+            </div>
+        </li>
+
+        <li class="gradelist__item gradelist__item--active" id="my-grade">
+            <div class="gradelist__item__top">
+                <div class="gradelist__item__grade"> 
+                    Class 7
+                </div>
+                <span class="gradelist__item__icon material-icons">done</span>
+            </div>
+            <div class="gradelist__item__bottom">
+                <div class="gradelist__item__tag">
+                    7D
+                </div>
+            </div>
+        </li>
+
+        <li class="gradelist__item gradelist__item--active" id="my-grade">
+            <div class="gradelist__item__top">
+                <div class="gradelist__item__grade"> 
+                    Class 8
+                </div>
+                <span class="gradelist__item__icon material-icons">done</span>
+            </div>
+            <div class="gradelist__item__bottom">
+                <div class="gradelist__item__tag">
+                    8A
+                </div>
+                <div class="gradelist__item__tag">
+                    8C (Class Teacher)
+                </div>
+            </div>
+        </li>
+        
+        <li class="gradelist__item gradelist__item--active" id="my-grade">
+            <div class="gradelist__item__top">
+                <div class="gradelist__item__grade"> 
+                    Class 9
+                </div>
+                <span class="gradelist__item__icon material-icons">done</span>
+            </div>
+            <div class="gradelist__item__bottom">
+                <div class="gradelist__item__tag">
+                    9A
+                </div>
+                <div class="gradelist__item__tag">
+                    9B
+                </div>
+            </div>
+        </li>
+
+        <button class="gradelist__btn gradelist__btn--active">
+            Show All
+        </button>
+
+        <li class="gradelist__division" id="other-grade">
+            Other Grades
+        </li>
+
+        <li class="gradelist__item" id="other-grade">
+            <div class="gradelist__item__top">
+                <div class="gradelist__item__grade"> 
+                    Class 1
+                </div>
+                <span class="gradelist__item__icon material-icons">done</span>
+            </div>
+        </li>
+
+        <li class="gradelist__item" id="other-grade">
+            <div class="gradelist__item__top">
+                <div class="gradelist__item__grade"> 
+                    Class 2
+                </div>
+                <span class="gradelist__item__icon material-icons">done</span>
+            </div>
+        </li>
+
+        <li class="gradelist__item" id="other-grade">
+            <div class="gradelist__item__top">
+                <div class="gradelist__item__grade"> 
+                    Class 3
+                </div>
+                <span class="gradelist__item__icon material-icons">done</span>
+            </div>
+        </li>
+
+        <li class="gradelist__item" id="other-grade">
+            <div class="gradelist__item__top">
+                <div class="gradelist__item__grade"> 
+                    Class 4
+                </div>
+                <span class="gradelist__item__icon material-icons">done</span>
+            </div>
+        </li>
+
+        <li class="gradelist__item" id="other-grade">
+            <div class="gradelist__item__top">
+                <div class="gradelist__item__grade"> 
+                    Class 5
+                </div>
+                <span class="gradelist__item__icon material-icons">done</span>
+            </div>
+        </li>
+
+        <li class="gradelist__item" id="other-grade">
+            <div class="gradelist__item__top">
+                <div class="gradelist__item__grade"> 
+                    Class 10
+                </div>
+                <span class="gradelist__item__icon material-icons">done</span>
+            </div>
+        </li>
+
+        <li class="gradelist__item" id="other-grade">
+            <div class="gradelist__item__top">
+                <div class="gradelist__item__grade"> 
+                    Class 11
+                </div>
+                <span class="gradelist__item__icon material-icons">done</span>
+            </div>
+        </li>
+
+        <li class="gradelist__item" id="other-grade">
+            <div class="gradelist__item__top">
+                <div class="gradelist__item__grade"> 
+                    Class 12
+                </div>
+                <span class="gradelist__item__icon material-icons">done</span>
+            </div>
+        </li>
+    </ul>
+
+    <div class="bookinput" id="Section-input">
+        <div class="bookinput__header">
+            <p class="bookinput__header__name">
+                Section Title
+            </p>
+            <button class="bookinput__header__btn material-icons">
+                close
+            </button>
+        </div>
+
+        <div class="bookinput__label">
+            title
+        </div>
+
+        <textarea class="bookinput__input" maxlength="20"></textarea>
+
+        <div class="bookinput__lettercount">
+            0/20
+        </div>
+
+        <button class="bookinput__btn">
+            Add Section
+        </button>
+    </div>
+
+    <div class="bookinput" id="Book-title-input">
+        <div class="bookinput__header">
+            <p class="bookinput__header__name">
+                Book Title
+            </p>
+            <button class="bookinput__header__btn material-icons">
+                close
+            </button>
+        </div>
+
+        <div class="bookinput__label">
+            title
+        </div>
+
+        <textarea class="bookinput__input" maxlength="64"></textarea>
+
+        <div class="bookinput__lettercount">
+            0/64
+        </div>
+
+        <button class="bookinput__btn">
+            Save Title
+        </button>
+    </div>
+
+    <div class="background">
+        <div class="background__top background__top--bookdetails"></div>
+        <div class="background__bottom background__bottom--bookdetails"></div>
+    </div>
+    <script src="javascript/book-builder.js"></script>
+</body>
+</html>
