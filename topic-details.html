@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/classedge2.css">
+
+    <title>Book Details</title>
+</head>
+<body>
+    <header class="header">
+
+        <div class="header__left">
+
+            <button class="header__btn material-icons">
+                hexagon
+            </button>
+
+            <div class="header__logo">
+                <h1 class="header__logo__h1">class<span>edge</span></h1>
+                <p class="header__logo__p">app name here</p>
+            </div>
+
+            <p class="header__line">
+                |
+            </p>
+
+            <div class="header__profile">
+                <img class="header__profile__img" src="assets/babydriver1.png" alt="school logo">
+                <div class="header__profile__content">
+                    <h1 class="header__profile__content__h1">MES High School</h1>
+                    <p class="header__profile__content__p">Baramati</p>
+                </div>
+                <button class="header__profile__btn material-icons">
+                    unfold_more
+                </button>
+            </div>
+        </div>
+        
+        <div class="header__right">
+            <div class="header__profile__content"> 
+                <h1 class="header__profile__content__h1">Name Surname</h1>
+                <p class="header__profile__content__p">User Role</p>
+            </div>
+            <button class="header__profile__btn material-icons">
+                unfold_more
+            </button>
+            <img class="header__profile__img" src="assets/babydriver1.png" alt="school logo">
+        </div>
+
+    </header>
+
+    <nav class="nav">
+
+        <ul class="nav__ul">
+            
+            <li class="nav__li">
+                <button class="nav__btn material-icons">
+                    hexagon
+                </button>
+                <p class="nav__p">Planner</p>
+            </li>
+
+            <li class="nav__li">
+                <button class="nav__btn material-icons">
+                    hexagon
+                </button>
+                <p class="nav__p">Classes</p>
+            </li>
+
+            <li class="nav__li">
+                <button class="nav__btn nav__btn--active material-icons">
+                    hexagon
+                </button>
+                <p class="nav__p nav__p--active">My Desk</p>
+            </li>
+
+            <li class="nav__li">
+                <button class="nav__btn material-icons">
+                    hexagon
+                </button>
+                <p class="nav__p">Messages</p>
+            </li>
+
+            <li class="nav__li">
+                <button class="nav__btn">
+                    ...
+                </button>
+                <p class="nav__p">Notices</p>
+            </li>
+        </ul>
+
+        <ul class="nav__ul">
+
+            <li class="nav__li">
+                <button class="nav__btn material-icons">
+                    hexagon
+                </button>
+                <p class="nav__p">Contact us</p>
+            </li>
+
+            <li class="nav__li">
+                <button class="nav__btn material-icons">
+                    hexagon
+                </button>
+                <p class="nav__p">Settings</p>
+            </li>
+
+            <li class="nav__li">
+                <button class="nav__btn material-icons">
+                    hexagon
+                </button>
+                <p class="nav__p">Help</p>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <div class="titlebar">
+
+        <a href="book-details.html">
+            <button class="titlebar__btn material-icons">
+                arrow_back
+            </button>
+        </a>
+
+        <div class="titlebar__title">
+            Topic Details
+        </div>
+
+        <button class="titlebar__btn material-icons">
+            info_outline
+        </button>
+
+        <button class="titlebar__btn" id="overflowbtn">
+
+            <span class="material-icons">
+                more_vert
+            </span>
+
+            <div class="expansion">
+                <div class="expansion__element">
+                    <span class="expansion__element__icon material-icons">
+                        edit
+                    </span>
+                    <p class="expansion__element__name">
+                        Rename
+                    </p>
+                </div>
+
+                <div class="expansion__element">
+                    <span class="expansion__element__icon material-icons">
+                        assignment
+                    </span>
+                    <p class="expansion__element__name">
+                        Assign
+                    </p>
+                </div>
+
+                <div class="expansion__element">
+                    <span class="expansion__element__icon material-icons">
+                        low_priority
+                    </span>
+                    <p class="expansion__element__name">
+                        Reorder
+                    </p>
+                </div>
+
+                <div class="expansion__element">
+                    <span class="expansion__element__icon material-icons">
+                        file_copy
+                    </span>
+                    <p class="expansion__element__name">
+                        Duplicate
+                    </p>
+                </div>
+
+                <div class="expansion__element">
+                    <span class="expansion__element__icon material-icons">
+                        print
+                    </span>
+                    <p class="expansion__element__name">
+                        Print
+                    </p>
+                </div>
+
+                <div class="expansion__element">
+                    <span class="expansion__element__icon material-icons">
+                        share
+                    </span>
+                    <p class="expansion__element__name">
+                        Share
+                    </p>
+                </div>
+
+                <div class="expansion__element">
+                    <span class="expansion__element__icon expansion__element__icon--delete material-icons">
+                        delete
+                    </span>
+                    <p class="expansion__element__name expansion__element__name--delete">
+                        Delete
+                    </p>
+                </div>
+            </div>
+
+        </button>
+
+        <button class="titlebar__primary">
+            <span class="material-icons">add</span>
+            <p class="titlebar__primary__p">Add Resources</p>
+        </button>
+
+    </div>
+
+    <div class="bookdetails">
+
+        <div class="bookdetails__left">
+
+            <div class="bookinfo">
+                <div class="bookinfo__tag"> 
+
+                    <div class="bookinfo__topic">
+                        2.4 Harmful Microorganisms
+                    </div>
+    
+                    <div class="bookinfo__tag__right">
+                        <button class="bookinfo__tag__btn material-icons">
+                                chevron_left
+                        </button>
+        
+                        <button class="bookinfo__tag__btn material-icons">
+                                chevron_right
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bookdetails__searchbar searchbar">
+                <span class="searchbar__searchicon material-icons">
+                    search
+                </span>
+                <input class="searchbar__input" type="text" placeholder="Search...">
+                <button class="searchbar__btn searchbar__btn--active material-icons">
+                    highlight_off
+                </button>
+            </div>
+
+            <ul class="bookdetails__list">
+
+                <li class="bookdetails__header">
+                    <input class="bookdetails__checkbox" type="checkbox"> 
+                    <p class="bookdetails__card__header">All Resources (9)</p>
+                    <button class="bookdetails__card__btn material-icons">
+                        expand_more
+                    </button>
+                </li>
+
+                <li class="bookdetails__card bookdetails__card--active">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <div class="bookdetails__card__thumbnail bookdetails__card__thumbnail--yellow material-icons">
+                        link
+                    </div>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h1">Types of Harmful Microorganisms</h1>
+                        <p class="bookdetails__card__content__p">Wikipedia</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card bookdetails__card--active">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <div class="bookdetails__card__thumbnail bookdetails__card__thumbnail--yellow material-icons">
+                        description
+                    </div>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h1">Pathogens</h1>
+                        <p class="bookdetails__card__content__p">TCE Document</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card bookdetails__card--active">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <div class="bookdetails__card__thumbnail bookdetails__card__thumbnail--grey material-icons">
+                        link
+                    </div>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h1">Flesh-eating bacteria</h1>
+                        <p class="bookdetails__card__content__p">Wikipedia</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card bookdetails__card--active">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <div class="bookdetails__card__thumbnail bookdetails__card__thumbnail--grey material-icons">
+                        link
+                    </div>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h1">Bacteria and Viruses</h1>
+                        <p class="bookdetails__card__content__p">Wikipedia</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card bookdetails__card--active">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <div class="bookdetails__card__thumbnail bookdetails__card__thumbnail--yellow material-icons">
+                        description
+                    </div>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h1">Harmful Microorganisms</h1>
+                        <p class="bookdetails__card__content__p">Studi</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card bookdetails__card--active">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <div class="bookdetails__card__thumbnail bookdetails__card__thumbnail--grey material-icons">
+                        link
+                    </div>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h1">Plasmodium vivax</h1>
+                        <p class="bookdetails__card__content__p">Wikipedia</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card bookdetails__card--active">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <div class="bookdetails__card__thumbnail bookdetails__card__thumbnail--yellow material-icons">
+                        link
+                    </div>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h1">Microscopic organisms</h1>
+                        <p class="bookdetails__card__content__p">Wikipedia</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card bookdetails__card--active">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <div class="bookdetails__card__thumbnail bookdetails__card__thumbnail--yellow material-icons">
+                        link
+                    </div>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h1">Microscopic-Fungi</h1>
+                        <p class="bookdetails__card__content__p">Wikipedia</p>
+                    </div>
+                </li>
+
+                <li class="bookdetails__card bookdetails__card--active">
+                    <input class="bookdetails__checkbox" type="checkbox">
+                    <div class="bookdetails__card__thumbnail bookdetails__card__thumbnail--grey material-icons">
+                        description
+                    </div>
+                    <div class="bookdetails__card__content">
+                        <h1 class="bookdetails__card__content__h1">Pathogens</h1>
+                        <p class="bookdetails__card__content__p">TCE Document</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="bookdetails__right">
+        </div>
+
+    </div>
+
+    <div class="background">
+        <div class="background__top background__top--bookdetails"></div>
+        <div class="background__bottom background__bottom--bookdetails"></div>
+    </div>
+
+    <script src="javascript/bookshelf.js"></script>
+</body>
+</html>

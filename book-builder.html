@@ -126,7 +126,7 @@
 
     <div class="titlebar">
 
-        <a href="bookshelf.html">
+        <a href="my-desk.html">
             <button class="titlebar__btn material-icons">
                 arrow_back
             </button>
@@ -175,9 +175,9 @@
                 </div>
             </div>
 
-            <div class="bookbuilder__element">
+            <div class="bookbuilder__header">
                 <h2 class="bookbuilder__element__h2">
-                    Table of contents(0)
+                    Table of contents(1)
                 </h2>
                 <button class="bookbuilder__element__btn bookbuilder__element__btn--blue expansion__btn" id="Add-btn">
                     <span class="material-icons">add</span> Add
@@ -276,241 +276,257 @@
         </div>
     </div>
 
-    <ul class="subjectlist" id="Subject-List">
-        <li class="subjectlist__header">
-            <p class="subjectlist__header__name">
+    <ul class="selectionlist" id="Subject-List">
+        <li class="selectionlist__header">
+            <p class="selectionlist__header__name">
                 Subject List
             </p>
-            <button class="subjectlist__header__btn material-icons">
+            <button class="selectionlist__header__btn material-icons">
                 close
             </button>
         </li>
 
-        <li class="subjectlist__division subjectlist__division--active" id="my-subject">
+        <li class="selectionlist__division selectionlist__division--active" id="my">
             My Subjects
         </li>
 
-        <li class="subjectlist__item subjectlist__item--active" id="my-subject">
-            <div class="subjectlist__item__subject"> 
-                Science
+        <li class="selectionlist__item selectionlist__item--active" id="my">
+            <div class="selectionlist__item__top">
+                <div class="selectionlist__item__value"> 
+                    Science 
+                </div>
+                <span class="selectionlist__item__icon material-icons">done</span>
             </div>
-            <span class="subjectlist__item__icon material-icons">done</span>
         </li>
 
-        <li class="subjectlist__item subjectlist__item--active" id="my-subject">
-            <div class="subjectlist__item__subject"> 
-                Mathematics
+        <li class="selectionlist__item selectionlist__item--active" id="my">
+            <div class="selectionlist__item__top">
+                <div class="selectionlist__item__value"> 
+                    Mathematics
+                </div>
+                <span class="selectionlist__item__icon material-icons">done</span>
             </div>
-            <span class="subjectlist__item__icon material-icons">done</span>
         </li>
 
-        <button class="subjectlist__btn subjectlist__btn--active">
+        <button class="selectionlist__btn selectionlist__btn--active">
             Show All
         </button>
 
-        <li class="subjectlist__division" id="other-subject">
+        <li class="selectionlist__division" id="other">
             Other Subjects
         </li>
 
-        <li class="subjectlist__item" id="other-subject">
-            <div class="subjectlist__item__subject"> 
-                English Literature
+        <li class="selectionlist__item" id="other">
+            <div class="selectionlist__item__top">
+                <div class="selectionlist__item__value"> 
+                    English Literature
+                </div>
+                <span class="selectionlist__item__icon material-icons">done</span>
             </div>
-            <span class="subjectlist__item__icon material-icons">done</span>
         </li>
 
-        <li class="subjectlist__item" id="other-subject">
-            <div class="subjectlist__item__subject"> 
-                English Language
+        <li class="selectionlist__item" id="other">
+            <div class="selectionlist__item__top">
+                <div class="selectionlist__item__value"> 
+                    English Language
+                </div>
+                <span class="selectionlist__item__icon material-icons">done</span>
             </div>
-            <span class="subjectlist__item__icon material-icons">done</span>
         </li>
 
-        <li class="subjectlist__item" id="other-subject">
-            <div class="subjectlist__item__subject"> 
-                Hindi Literature
+        <li class="selectionlist__item" id="other">
+            <div class="selectionlist__item__top">
+                <div class="selectionlist__item__value"> 
+                    Hindi Literature
+                </div>
+                <span class="selectionlist__item__icon material-icons">done</span>
             </div>
-            <span class="subjectlist__item__icon material-icons">done</span>
         </li>
 
-        <li class="subjectlist__item" id="other-subject">
-            <div class="subjectlist__item__subject"> 
-                Hindi Language
+        <li class="selectionlist__item" id="other">
+            <div class="selectionlist__item__top">
+                <div class="selectionlist__item__value"> 
+                    Hindi Language
+                </div>
+                <span class="selectionlist__item__icon material-icons">done</span>
             </div>
-            <span class="subjectlist__item__icon material-icons">done</span>
         </li>
 
-        <li class="subjectlist__item" id="other-subject">
-            <div class="subjectlist__item__subject"> 
-                History
+        <li class="selectionlist__item" id="other">
+            <div class="selectionlist__item__top">
+                <div class="selectionlist__item__value"> 
+                    History
+                </div>
+                <span class="selectionlist__item__icon material-icons">done</span>
             </div>
-            <span class="subjectlist__item__icon material-icons">done</span>
         </li>
 
-        <li class="subjectlist__item" id="other-subject">
-            <div class="subjectlist__item__subject"> 
-                Geography
+        <li class="selectionlist__item" id="other">
+            <div class="selectionlist__item__top">
+                <div class="selectionlist__item__value"> 
+                    Geography
+                </div>
+                <span class="selectionlist__item__icon material-icons">done</span>
             </div>
-            <span class="subjectlist__item__icon material-icons">done</span>
         </li>
     </ul>
 
-    <ul class="gradelist" id="Grade-List">
-        <li class="gradelist__header">
-            <p class="gradelist__header__name">
+    <ul class="selectionlist" id="Grade-List">
+        <li class="selectionlist__header">
+            <p class="selectionlist__header__name">
                 Grade List
             </p>
-            <button class="gradelist__header__btn material-icons">
+            <button class="selectionlist__header__btn material-icons">
                 close
             </button>
         </li>
 
-        <li class="gradelist__division gradelist__division--active" id="my-grade">
+        <li class="selectionlist__division selectionlist__division--active" id="my">
             My Subjects
         </li>
 
-        <li class="gradelist__item gradelist__item--active" id="my-grade">
-            <div class="gradelist__item__top">
-                <div class="gradelist__item__grade"> 
+        <li class="selectionlist__item selectionlist__item--active" id="my">
+            <div class="selectionlist__item__top">
+                <div class="selectionlist__item__value"> 
                     Class 6
                 </div>
-                <span class="gradelist__item__icon material-icons">done</span>
+                <span class="selectionlist__item__icon material-icons">done</span>
             </div>
-            <div class="gradelist__item__bottom">
-                <div class="gradelist__item__tag">
+            <div class="selectionlist__item__bottom">
+                <div class="selectionlist__item__tag">
                     6B
                 </div>
-                <div class="gradelist__item__tag">
+                <div class="selectionlist__item__tag">
                     6C
                 </div>
             </div>
         </li>
 
-        <li class="gradelist__item gradelist__item--active" id="my-grade">
-            <div class="gradelist__item__top">
-                <div class="gradelist__item__grade"> 
+        <li class="selectionlist__item selectionlist__item--active" id="my">
+            <div class="selectionlist__item__top">
+                <div class="selectionlist__item__value"> 
                     Class 7
                 </div>
-                <span class="gradelist__item__icon material-icons">done</span>
+                <span class="selectionlist__item__icon material-icons">done</span>
             </div>
-            <div class="gradelist__item__bottom">
-                <div class="gradelist__item__tag">
+            <div class="selectionlist__item__bottom">
+                <div class="selectionlist__item__tag">
                     7D
                 </div>
             </div>
         </li>
 
-        <li class="gradelist__item gradelist__item--active" id="my-grade">
-            <div class="gradelist__item__top">
-                <div class="gradelist__item__grade"> 
+        <li class="selectionlist__item selectionlist__item--active" id="my">
+            <div class="selectionlist__item__top">
+                <div class="selectionlist__item__value"> 
                     Class 8
                 </div>
-                <span class="gradelist__item__icon material-icons">done</span>
+                <span class="selectionlist__item__icon material-icons">done</span>
             </div>
-            <div class="gradelist__item__bottom">
-                <div class="gradelist__item__tag">
+            <div class="selectionlist__item__bottom">
+                <div class="selectionlist__item__tag">
                     8A
                 </div>
-                <div class="gradelist__item__tag">
+                <div class="selectionlist__item__tag">
                     8C (Class Teacher)
                 </div>
             </div>
         </li>
         
-        <li class="gradelist__item gradelist__item--active" id="my-grade">
-            <div class="gradelist__item__top">
-                <div class="gradelist__item__grade"> 
+        <li class="selectionlist__item selectionlist__item--active" id="my">
+            <div class="selectionlist__item__top">
+                <div class="selectionlist__item__value"> 
                     Class 9
                 </div>
-                <span class="gradelist__item__icon material-icons">done</span>
+                <span class="selectionlist__item__icon material-icons">done</span>
             </div>
-            <div class="gradelist__item__bottom">
-                <div class="gradelist__item__tag">
+            <div class="selectionlist__item__bottom">
+                <div class="selectionlist__item__tag">
                     9A
                 </div>
-                <div class="gradelist__item__tag">
+                <div class="selectionlist__item__tag">
                     9B
                 </div>
             </div>
         </li>
 
-        <button class="gradelist__btn gradelist__btn--active">
+        <button class="selectionlist__btn selectionlist__btn--active">
             Show All
         </button>
 
-        <li class="gradelist__division" id="other-grade">
+        <li class="selectionlist__division" id="other">
             Other Grades
         </li>
 
-        <li class="gradelist__item" id="other-grade">
-            <div class="gradelist__item__top">
-                <div class="gradelist__item__grade"> 
+        <li class="selectionlist__item" id="other">
+            <div class="selectionlist__item__top">
+                <div class="selectionlist__item__value"> 
                     Class 1
                 </div>
-                <span class="gradelist__item__icon material-icons">done</span>
+                <span class="selectionlist__item__icon material-icons">done</span>
             </div>
         </li>
 
-        <li class="gradelist__item" id="other-grade">
-            <div class="gradelist__item__top">
-                <div class="gradelist__item__grade"> 
+        <li class="selectionlist__item" id="other">
+            <div class="selectionlist__item__top">
+                <div class="selectionlist__item__value"> 
                     Class 2
                 </div>
-                <span class="gradelist__item__icon material-icons">done</span>
+                <span class="selectionlist__item__icon material-icons">done</span>
             </div>
         </li>
 
-        <li class="gradelist__item" id="other-grade">
-            <div class="gradelist__item__top">
-                <div class="gradelist__item__grade"> 
+        <li class="selectionlist__item" id="other">
+            <div class="selectionlist__item__top">
+                <div class="selectionlist__item__value"> 
                     Class 3
                 </div>
-                <span class="gradelist__item__icon material-icons">done</span>
+                <span class="selectionlist__item__icon material-icons">done</span>
             </div>
         </li>
 
-        <li class="gradelist__item" id="other-grade">
-            <div class="gradelist__item__top">
-                <div class="gradelist__item__grade"> 
+        <li class="selectionlist__item" id="other">
+            <div class="selectionlist__item__top">
+                <div class="selectionlist__item__value"> 
                     Class 4
                 </div>
-                <span class="gradelist__item__icon material-icons">done</span>
+                <span class="selectionlist__item__icon material-icons">done</span>
             </div>
         </li>
 
-        <li class="gradelist__item" id="other-grade">
-            <div class="gradelist__item__top">
-                <div class="gradelist__item__grade"> 
+        <li class="selectionlist__item" id="other">
+            <div class="selectionlist__item__top">
+                <div class="selectionlist__item__value"> 
                     Class 5
                 </div>
-                <span class="gradelist__item__icon material-icons">done</span>
+                <span class="selectionlist__item__icon material-icons">done</span>
             </div>
         </li>
 
-        <li class="gradelist__item" id="other-grade">
-            <div class="gradelist__item__top">
-                <div class="gradelist__item__grade"> 
+        <li class="selectionlist__item" id="other">
+            <div class="selectionlist__item__top">
+                <div class="selectionlist__item__value"> 
                     Class 10
                 </div>
-                <span class="gradelist__item__icon material-icons">done</span>
+                <span class="selectionlist__item__icon material-icons">done</span>
             </div>
         </li>
 
-        <li class="gradelist__item" id="other-grade">
-            <div class="gradelist__item__top">
-                <div class="gradelist__item__grade"> 
+        <li class="selectionlist__item" id="other">
+            <div class="selectionlist__item__top">
+                <div class="selectionlist__item__value"> 
                     Class 11
                 </div>
-                <span class="gradelist__item__icon material-icons">done</span>
+                <span class="selectionlist__item__icon material-icons">done</span>
             </div>
         </li>
 
-        <li class="gradelist__item" id="other-grade">
-            <div class="gradelist__item__top">
-                <div class="gradelist__item__grade"> 
+        <li class="selectionlist__item" id="other">
+            <div class="selectionlist__item__top">
+                <div class="selectionlist__item__value"> 
                     Class 12
                 </div>
-                <span class="gradelist__item__icon material-icons">done</span>
+                <span class="selectionlist__item__icon material-icons">done</span>
             </div>
         </li>
     </ul>

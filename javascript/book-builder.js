@@ -14,165 +14,121 @@ document.querySelectorAll(".expansion__btn").forEach(
     }
 )
 
-// shows the input list
-document.querySelectorAll(".bookbuilder__inputelement").forEach (
-    (input_element) => {
-        input_element.addEventListener("click",
-            function () {
-                const input_list = document.getElementById(input_element.id+"-List");
-                input_list.classList.add(input_list.classList[0]+"--active");
+function createInputList (button_id,input_element_id,output_element_id) {
+    const input_list = document.getElementById(input_element_id);
+
+    document.getElementById(button_id).addEventListener("click",
+        function () {
+            input_list.classList.add(input_list.classList[0]+"--active");
+        }
+    )
+
+    input_list.querySelector(".selectionlist__header__btn").addEventListener("click",closeList)
+
+    function closeList () {
+        input_list.querySelectorAll("#other").forEach(
+            (subject) => {
+                subject.classList.remove(subject.classList[0]+"--active");
+                input_list.classList.remove("selectionlist--active");
+                input_list.querySelector(".selectionlist__btn").classList.add("selectionlist__btn--active");
             }
         )
     }
-)
 
-document.querySelector(".subjectlist__header__btn").addEventListener("click",closeSubjectList)
-
-function closeSubjectList () {
-    document.querySelectorAll("#other-subject").forEach(
-        (subject) => {
-            subject.classList.remove(subject.classList[0]+"--active");
-        }
-    )
-    document.getElementById("Subject-List").classList.remove("subjectlist--active");
-    document.querySelector(".subjectlist__btn").classList.add("subjectlist__btn--active");
-}
-
-// Shows other Subjects in subject list
-document.querySelector(".subjectlist__btn").addEventListener("click",
-    function () {
-        document.querySelectorAll(".subjectlist__item").forEach(
-            (listitem) => {
-                listitem.classList.add("subjectlist__item--active");
-            }
-        );
-
-        document.querySelectorAll(".subjectlist__division").forEach(
-            (listitem) => {
-                listitem.classList.add("subjectlist__division--active");
-            }
-        );
-
-        this.classList.remove("subjectlist__btn--active");
-}
-)
-
-//  takes input for subject list
-document.querySelectorAll(".subjectlist__item").forEach(
-    (listitem) => {
-        listitem.addEventListener("click",
-            function () {  
-                document.querySelectorAll(".subjectlist__item__icon").forEach(
-                    (item_icon) => {
-                        item_icon.classList.remove("subjectlist__item__icon--active");
-                    }
-                )
-
-                this.querySelector(".subjectlist__item__icon").classList.add("subjectlist__item__icon--active");
-
-                document.getElementById("Subject-input").value = this.querySelector(".subjectlist__item__subject").innerText;
-
-                closeSubjectList();
-            }
-        )
-    }
-)
-
-document.querySelector(".gradelist__header__btn").addEventListener("click",closeGradeList)
-
-function closeGradeList () {
-    document.querySelectorAll("#other-grade").forEach(
-        (grade) => {
-            grade.classList.remove(grade.classList[0]+"--active");
-        }
-    )
-    document.getElementById("Grade-List").classList.remove("gradelist--active");
-    document.querySelector(".gradelist__btn").classList.add("gradelist__btn--active");
-}
-
-// Shows other Grades in grade list
-document.querySelector(".gradelist__btn").addEventListener("click",
-    function () {
-        document.querySelectorAll(".gradelist__item").forEach(
-            (listitem) => {
-                listitem.classList.add("gradelist__item--active");
-            }
-        );
-
-        document.querySelectorAll(".gradelist__division").forEach(
-            (listitem) => {
-                listitem.classList.add("gradelist__division--active");
-            }
-        );
-
-        this.classList.remove("gradelist__btn--active");
-}
-)
-
-//  takes input for grade list
-document.querySelectorAll(".gradelist__item").forEach(
-    (listitem) => {
-        listitem.addEventListener("click",
-            function () {  
-                document.querySelectorAll(".gradelist__item__icon").forEach(
-                    (item_icon) => {
-                        item_icon.classList.remove("gradelist__item__icon--active");
-                    }
-                )
-
-                this.querySelector(".gradelist__item__icon").classList.add("gradelist__item__icon--active");
-
-                document.getElementById("Grade-input").value = this.querySelector(".gradelist__item__grade").innerText;
-
-                closeGradeList();
-            }
-        )
-    }
-)
-
-function sectioninput () {
-    const section_element = document.getElementById("Section-input");
-
-    document.getElementById("add-section").addEventListener("click",
+    input_list.querySelector(".selectionlist__btn").addEventListener("click",
         function () {
-            section_element.classList.add("bookinput--active");
+            input_list.querySelectorAll(".selectionlist__item").forEach(
+                (listitem) => {
+                    listitem.classList.add("selectionlist__item--active");
+                }
+            );
+    
+            input_list.querySelectorAll(".selectionlist__division").forEach(
+                (listitem) => {
+                    listitem.classList.add("selectionlist__division--active");
+                }
+            );
+    
+            this.classList.remove("selectionlist__btn--active");
         }
     )
 
-    section_element.querySelector(".bookinput__header__btn").addEventListener("click",
-        function () {
-            section_element.classList.remove("bookinput--active");
-        }
-    )
+    input_list.querySelectorAll(".selectionlist__item").forEach(
+        (listitem) => {
+            listitem.addEventListener("click",
+                function () {  
+                    input_list.querySelectorAll(".selectionlist__item__icon").forEach(
+                        (item_icon) => {
+                            item_icon.classList.remove("selectionlist__item__icon--active");
+                        }
+                    )
+    
+                    this.querySelector(".selectionlist__item__icon").classList.add("selectionlist__item__icon--active");
+    
+                    document.getElementById(output_element_id).value = this.querySelector(".selectionlist__item__value").innerText;
 
-    section_element.querySelector(".bookinput__input").addEventListener("input",
-        function () {
-            section_element.querySelector(".bookinput__lettercount").innerText = this.value.length + "/20";
+                    closeList();
+                }
+            )
         }
     )
 }
 
-function createbook() {
-    const section_element = document.getElementById("Book-title-input");
+createInputList("Subject","Subject-List","Subject-input");
+createInputList("Grade","Grade-List","Grade-input");
 
-    document.getElementById("Create-book").addEventListener("click",
+function bookinput (button_id,input_element_id,output_function) {
+    const input_element = document.getElementById(input_element_id);
+
+    document.getElementById(button_id).addEventListener("click",
         function () {
-            section_element.classList.add("bookinput--active");
+            input_element.classList.add("bookinput--active");
         }
     )
 
-    section_element.querySelector(".bookinput__header__btn").addEventListener("click",
+    input_element.querySelector(".bookinput__header__btn").addEventListener("click",
         function () {
-            section_element.classList.remove("bookinput--active");
+            input_element.classList.remove("bookinput--active");
         }
     )
 
-    section_element.querySelector(".bookinput__input").addEventListener("input",
+    input_element.querySelector(".bookinput__input").addEventListener("input",
         function () {
-            section_element.querySelector(".bookinput__lettercount").innerText = this.value.length + "/64";
+            input_element.querySelector(".bookinput__lettercount").innerText = this.value.length + "/" + this.getAttribute("maxlength");
         }
     )
+
+    input_element.querySelector(".bookinput__btn").addEventListener("click",output_function)
 }
 
-sectioninput()
-createbook()
+var section_number = 1;
+
+function addSection() {
+    section_input = document.getElementById("Section-input");
+    new_section = document.querySelector(".bookbuilder__element").cloneNode(true);
+    new_section.querySelector(".bookbuilder__element__h1").innerText = section_input.querySelector(".bookinput__input").value;
+
+    section_number++;
+    new_section.querySelector(".expansion__btn").id = "Section" + section_number;
+    new_section.querySelector(".expansion").id = "Section" + section_number;
+    document.querySelector(".bookbuilder__element__h2").innerText = "Table of Contents(" + section_number + ")";
+
+    document.querySelector(".bookbuilder__left").appendChild(new_section);
+    new_section.querySelector(".expansion__btn").addEventListener("click",
+        function () {
+            document.querySelectorAll(".expansion").forEach (
+                (expansion) => {
+                    if(expansion.id === this.id)
+                        expansion.classList.toggle("expansion--active");
+                }
+            )
+        }
+    )
+
+    section_input.querySelector(".bookinput__header__btn").click();
+    section_input.querySelector(".bookinput__input").value = "";
+    section_input.querySelector(".bookinput__lettercount").innerText = section_input.querySelector(".bookinput__input").value.length + "/" + section_input.querySelector(".bookinput__input").getAttribute("maxlength");
+}
+
+bookinput("add-section","Section-input",addSection);
+bookinput("Create-book","Book-title-input");
